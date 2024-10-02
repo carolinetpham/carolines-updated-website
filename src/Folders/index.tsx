@@ -1,9 +1,11 @@
-import ClickComponent from "./EducationFolder";
+import EducationClickComponent from "./EducationFolder";
+import ProjectsClickComponent from "./ProjectsFolder";
 
 export default function Folders() {
   return (
     <div id="folders">
-      <ClickComponent />
+      <ProjectsClickComponent />
+      <EducationClickComponent />
     </div>
   );
 }
