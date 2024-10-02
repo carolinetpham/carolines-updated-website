@@ -3,7 +3,7 @@ import { FaFolder } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import "./styles.css";
 
-const ClickComponent: React.FC = () => {
+const EducationClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -75,4 +75,4 @@ const ClickComponent: React.FC = () => {
   );
 };
 
-export default ClickComponent;
+export default EducationClickComponent;
