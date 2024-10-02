@@ -1,4 +1,5 @@
-/* Modal Overlay */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -13,6 +14,16 @@
     opacity: 0;
     animation: fadeIn 0.3s forwards;
   }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  .fade-out {
+    opacity: 1;
+    animation: fadeOut 0.3s forwards;
+  }
   
   /* Fade-in animation for overlay */
   @keyframes fadeIn {
@@ -21,6 +32,15 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
     }
   }
   
@@ -37,6 +57,10 @@
     position: relative; 
     text-align: left;
   }
+
+  .animate-modal {
+    animation: grow 0.4s ease-in-out forwards;
+  }
   
   @keyframes grow {
     0% {
@@ -52,6 +76,20 @@
     }
   }
   
+  .close-modal {
+    animation: shrink 0.4s ease-in-out forwards; /* Smooth exit animation */
+  }
+  
+  @keyframes shrink {
+    0% {
+      transform: scale(1); /* Start full size */
+      opacity: 1; /* Fully visible */
+    }
+    100% {
+      transform: scale(0); /* Shrink to invisible */
+      opacity: 0; /* Fade out */
+    }
+  }
 
 .close-button {
     position: absolute;
@@ -66,3 +104,74 @@
 .close-button:hover {
     color: #ff1e00; /* Change color on hover */
 }
+
+.folder-container {
+  display: flex;
+  justify-content: flex-start; 
+  height: 100vh; 
+  padding-left: 20px;
+}
+
+.folder-wrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.folder-text {
+  font-size: 20px; 
+  color: white; 
+  filter: drop-shadow(1px 1px 1px #606060);
+  font-family: 'Playwrite DE Grund', cursive;
+}
+
+.education-title {
+  font-family: 'Playwrite DE Grund', cursive;
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+}
+
+.education-subtitle {
+  font-family: 'Playwrite DE Grund', cursive;
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  background-color: pink;
+  border-radius: 25px;
+}
+
+.education-courses {
+  font-family: 'Playwrite DE Grund', cursive;
+  font-size: 20px;
+}
+
+.course-list {
+  font-family: 'Playwrite DE Grund', cursive;
+  background-color: lightblue;
+  border-radius: 25px;
+}
+
+.clubs {
+  font-family: 'Playwrite DE Grund', cursive;
+  font-size: 20px;
+}
+
+.clubs-list {
+  font-family: 'Playwrite DE Grund', cursive;
+  background-color: lightblue;
+  border-radius: 25px;
+}
+
+
+@media (max-width: 1024px) {
+  .education-subtitle {
+    font-size: 15px;
+  }
+
+  .modal {
+    width: 85vw;
+    height: 85vh;
+  }
+}
+
