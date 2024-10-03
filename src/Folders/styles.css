@@ -19,6 +19,12 @@
   gap: 50px;
 }
 
+#row-three {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
