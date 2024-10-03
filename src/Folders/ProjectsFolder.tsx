@@ -46,7 +46,7 @@ const ProjectsClickComponent: React.FC = () => {
           >
             <MdCancel onClick={handleCloseModal} className="close-button" />
             <h2 className="projects-title">Projects</h2>
-            <div className="row row-cols-1 row-cols-md-5 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
               <div className="projects-dashboard col">
                 <div
                   className="card rounded-3 overflow-hidden"
@@ -101,6 +101,60 @@ const ProjectsClickComponent: React.FC = () => {
                       target="_blank"
                     >
                       Figma Link
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="card rounded-3 overflow-hidden"
+                  style={{ width: "18rem" }}
+                >
+                  <img
+                    src="./images/old-portfolio-image.png"
+                    className="card-img-top"
+                    alt="image of my old portfolio's home page"
+                    width="100%"
+                  ></img>
+                  <div className="card-body">
+                    <h5 className="card-title">Old Personal Portfolio</h5>
+                    <p className="card-text">
+                      Independently mastered React and Bootstrap to build a
+                      visually compelling interface, showcasing skills in UI/UX
+                      design and front-end development. Integrated a contact
+                      page for email communication, enhancing user engagement.
+                    </p>
+                    <a
+                      href="https://github.com/carolinetpham/carolines-personal-portfolio"
+                      className="btn btn-primary"
+                      target="_blank"
+                    >
+                      Repository Link
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="card rounded-3 overflow-hidden"
+                  style={{ width: "18rem" }}
+                >
+                  <img
+                    src="./images/virtual-bj-image.png"
+                    className="card-img-top"
+                    alt="image of project gui"
+                    width="100%"
+                  ></img>
+                  <div className="card-body">
+                    <h5 className="card-title">Virtual Bullet Journal</h5>
+                    <p className="card-text">
+                      Designed a Java GUI application using
+                      Model-View-Controller patterns and engineered a secure
+                      data storage mechanism following SOLID principles to
+                      enhance the user experience.
+                    </p>
+                    <a
+                      href="https://github.com/carolinetpham/bullet-journal-planner"
+                      className="btn btn-primary"
+                      target="_blank"
+                    >
+                      Repository Link
                     </a>
                   </div>
                 </div>
