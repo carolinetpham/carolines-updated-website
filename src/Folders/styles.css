@@ -16,6 +16,7 @@
 #row-two {
   display: flex;
   align-items: center;
+  gap: 50px;
 }
 
 .modal-overlay {
@@ -261,6 +262,18 @@
   font-family: 'Playwrite DE Grund', cursive;
 }
 
+/*LinkedIn styling*/
+.linkedin-wrapper {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+.linkedin-icon-link {
+  text-decoration: none; /* Remove default link underline */
+}
 
 /*Mobile Device Styling*/
 

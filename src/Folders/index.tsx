@@ -1,6 +1,7 @@
 import EducationClickComponent from "./EducationFolder";
-import Github from "./Github";
+import Github from "../Icons/Github";
 import ProjectsClickComponent from "./ProjectsFolder";
+import Linkedin from "../Icons/Linkedin";
 
 export default function Folders() {
   return (
@@ -11,6 +12,7 @@ export default function Folders() {
       </div>
       <div id="row-two">
         <EducationClickComponent />
+        <Linkedin />
       </div>
     </div>
   );
