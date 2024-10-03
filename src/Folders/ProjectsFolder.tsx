@@ -71,6 +71,7 @@ const ProjectsClickComponent: React.FC = () => {
                       href="https://github.com/carolinetpham/Petalytics-PetFetch"
                       className="btn btn-primary"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Repository Link
                     </a>
@@ -99,6 +100,7 @@ const ProjectsClickComponent: React.FC = () => {
                       href="https://www.figma.com/design/JHx83jOa8YN8Zv5R6Wq4lU/AEye?node-id=207-282&node-type=canvas"
                       className="btn btn-primary"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Figma Link
                     </a>
@@ -126,6 +128,7 @@ const ProjectsClickComponent: React.FC = () => {
                       href="https://github.com/carolinetpham/carolines-personal-portfolio"
                       className="btn btn-primary"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Repository Link
                     </a>
@@ -153,6 +156,7 @@ const ProjectsClickComponent: React.FC = () => {
                       href="https://github.com/carolinetpham/bullet-journal-planner"
                       className="btn btn-primary"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Repository Link
                     </a>
