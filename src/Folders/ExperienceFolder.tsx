@@ -52,9 +52,9 @@ const ExperienceClickComponent: React.FC = () => {
       subtitle: "Office Assistant, Journalism Department",
       date: "Sep 2023 - Present",
       description: [
-        "Provided administrative support to the office by efficiently managing requested tasks",
-        "Coordinated appointments ensuring timely communication and organization within the department",
-        "Managed office supplies, reception duties, greeted visitors, and provided assistance as needed",
+        "Provide administrative support to the office by efficiently managing requested tasks",
+        "Coordinate appointments ensuring timely communication and organization within the department",
+        "Manage office supplies, reception duties, greeted visitors, and provided assistance as needed",
       ],
     },
   ];

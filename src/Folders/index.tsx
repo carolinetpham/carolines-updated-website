@@ -6,7 +6,11 @@ import ExperienceClickComponent from "./ExperienceFolder";
 import Mail from "../Icons/Mail";
 import SkillsClickComponent from "./SkillsFolder";
 
-export default function Folders() {
+interface FoldersPageProps {
+  username: string;
+}
+
+const FoldersPage: React.FC<FoldersPageProps> = ({ username }) => {
   return (
     <div id="folders-containers">
       <div id="row-one">
@@ -26,4 +30,6 @@ export default function Folders() {
       </div>
     </div>
   );
-}
+};
+
+export default FoldersPage;

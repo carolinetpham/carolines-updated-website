@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+
+.login-page {
+  font-family: 'Playwrite DE Grund', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./background.jpg') no-repeat;
+}
+
+.login-style {
+  background: transparent;
+  border: 2px solid rgba(255,255,255, .2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0,0,0, .2);
+  width: 420px;
+  border-radius: 25px;
+  padding: 70px 50px;
+}
+
+.login-page h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+.login-page p {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-form input {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    font-size: 24px;
+    background-color: #ff60af;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #840044;
+  }
