@@ -302,6 +302,15 @@
   border-radius: 2px; /* Optional: Make the line slightly rounded */
 }
 
+/*Mail Styling*/
+.mail-container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
 /*Mobile Device Styling*/
 
 

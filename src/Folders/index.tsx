@@ -3,6 +3,7 @@ import Github from "../Icons/Github";
 import ProjectsClickComponent from "./ProjectsFolder";
 import Linkedin from "../Icons/Linkedin";
 import ExperienceClickComponent from "./ExperienceFolder";
+import Mail from "../Icons/Mail";
 
 export default function Folders() {
   return (
@@ -17,6 +18,7 @@ export default function Folders() {
       </div>
       <div id="row-three">
         <ExperienceClickComponent />
+        <Mail />
       </div>
     </div>
   );
