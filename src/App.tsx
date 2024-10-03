@@ -1,6 +1,6 @@
 import "./App.css";
 import FoldersPage from "./Folders";
-import LoginForm from "./Components/LogIn/LoginForm";
+import LoginForm from "./Components/LoginForm";
 import { useState } from "react";
 
 const App: React.FC = () => {
