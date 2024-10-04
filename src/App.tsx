@@ -1,25 +1,43 @@
-import "./App.css";
-import FoldersPage from "./Folders";
-import LoginForm from "./Components/LoginForm";
-import { useState } from "react";
+import React, { useState } from "react";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
+import FoldersPage from "./Folders/index";
+import LoginPage from "./Components/LoginForm";
 
 const App: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState<string | null>(null);
 
-  // Function to handle login with username
-  const handleLogin = (user: string) => {
-    setUsername(user);
-    setIsLoggedIn(true);
+  // Handle login and update username state
+  const handleLogin = (name: string) => {
+    console.log("Logging in as:", name);
+    setUsername(name);
   };
 
   return (
     <div className="App">
-      {isLoggedIn ? (
-        <FoldersPage username={username} />
-      ) : (
-        <LoginForm onLogin={handleLogin} />
-      )}
+      <HashRouter>
+        <Routes>
+          {/* Login Page */}
+          <Route
+            path="/LoginPage/*"
+            element={<LoginPage onLogin={handleLogin} />}
+          />
+
+          {/* Folders Page */}
+          <Route
+            path="/FoldersPage/*"
+            element={
+              username ? (
+                <FoldersPage username={username} />
+              ) : (
+                <Navigate to="/LoginPage" />
+              )
+            }
+          />
+
+          {/* Default Route */}
+          <Route path="*" element={<Navigate to="/LoginPage" />} />
+        </Routes>
+      </HashRouter>
     </div>
   );
 };

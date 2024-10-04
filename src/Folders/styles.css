@@ -8,9 +8,9 @@
 }
 
 #row-one {
-  display: flex; 
-  align-items: center; 
-  gap: 50px; 
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 #row-two {
@@ -32,128 +32,139 @@
 }
 
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.3s forwards;
+}
+
+/* Fade-in animation for overlay */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 0.3s forwards;
   }
 
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 0.3s forwards;
-  }
-  
-  .fade-out {
+  to {
     opacity: 1;
-    animation: fadeOut 0.3s forwards;
   }
-  
-  /* Fade-in animation for overlay */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
 
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 0;
   }
-  
-  /* Modal Container */
-  .modal {
-    background: white;
-    padding: 0;
-    border-radius: 20px;
-    width: 80vw;
-    height: 80vh;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(0); 
-    animation: grow 0.4s ease-in-out forwards; 
-    position: relative; 
-    text-align: left;
-    overflow-y: auto;
-    position: relative;
+}
+
+/* Modal Container */
+.modal {
+  background: white;
+  padding: 0;
+  border-radius: 20px;
+  width: 80vw;
+  height: 80vh;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  animation: grow 0.4s ease-in-out forwards;
+  position: relative;
+  text-align: left;
+  overflow-y: auto;
+  position: relative;
+}
+
+.animate-modal {
+  animation: grow 0.4s ease-in-out forwards;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
   }
 
-  .animate-modal {
-    animation: grow 0.4s ease-in-out forwards;
+  80% {
+    transform: scale(1.1);
   }
-  
-  @keyframes grow {
-    0% {
-      transform: scale(0); 
-      opacity: 0.2; 
-    }
-    80% {
-      transform: scale(1.1); 
-    }
-    100% {
-      transform: scale(1); 
-      opacity: 1; 
-    }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .close-modal {
-    animation: shrink 0.4s ease-in-out forwards; /* Smooth exit animation */
+}
+
+.close-modal {
+  animation: shrink 0.4s ease-in-out forwards;
+  /* Smooth exit animation */
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+    /* Start full size */
+    opacity: 1;
+    /* Fully visible */
   }
-  
-  @keyframes shrink {
-    0% {
-      transform: scale(1); /* Start full size */
-      opacity: 1; /* Fully visible */
-    }
-    100% {
-      transform: scale(0); /* Shrink to invisible */
-      opacity: 0; /* Fade out */
-    }
+
+  100% {
+    transform: scale(0);
+    /* Shrink to invisible */
+    opacity: 0;
+    /* Fade out */
   }
+}
 
 .close-button {
-    position: sticky;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    color: #ff5849;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
+  position: sticky;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #ff5849;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .close-button:hover {
-    color: #ff1e00; /* Change color on hover */
+  color: #ff1e00;
+  /* Change color on hover */
 }
 
 .folder-container {
   display: flex;
-  justify-content: flex-start; 
-  height: auto; 
+  justify-content: flex-start;
+  height: auto;
   padding-left: 20px;
 }
 
 .folder-wrapper {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .folder-text {
-  font-size: 20px; 
-  color: white; 
+  font-size: 20px;
+  color: white;
   filter: drop-shadow(1px 1px 1px #606060);
   font-family: 'Playwrite DE Grund', cursive;
 }
@@ -220,27 +231,28 @@
 }
 
 .card {
-  background-color: #f8f9fa; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 
 .card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .card-img-top {
-  border-top-left-radius: 12px; 
+  border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  object-fit: cover; 
-  max-height: 150px; 
+  object-fit: cover;
+  max-height: 150px;
 }
+
 .card-title {
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 20px;
@@ -257,35 +269,37 @@
 
 /*GitHub styling*/
 .github-wrapper {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .github-icon-link {
-  text-decoration: none; /* Remove default link underline */
+  text-decoration: none;
+  /* Remove default link underline */
 }
 
 .icon-text {
-  font-size: 20px; 
-  color: white; 
+  font-size: 20px;
+  color: white;
   filter: drop-shadow(1px 1px 1px #606060);
   font-family: 'Playwrite DE Grund', cursive;
 }
 
 /*LinkedIn styling*/
 .linkedin-wrapper {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .linkedin-icon-link {
-  text-decoration: none; /* Remove default link underline */
+  text-decoration: none;
+  /* Remove default link underline */
 }
 
 /* Experience Styling */
@@ -304,18 +318,19 @@
 }
 
 .vertical-timeline::before {
-  width: 4px; 
+  width: 4px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 2px; /* Optional: Make the line slightly rounded */
+  border-radius: 2px;
+  /* Optional: Make the line slightly rounded */
 }
 
 /*Mail Styling*/
 .mail-container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /*Skills Styling*/
@@ -336,51 +351,53 @@
 }
 
 .category {
-  display: flex; 
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo-container {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .languages {
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: #FFDCA5; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
+  background-color: #FFDCA5;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
 }
 
 .tools {
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: #FFCE7E; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
+  background-color: #FFCE7E;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
 }
 
 .libraries-and-frameworks {
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: #FFBF59; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
+  background-color: #FFBF59;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
 }
 
-.languages-title, .tools-title, .libraries-and-frameworks-title {
+.languages-title,
+.tools-title,
+.libraries-and-frameworks-title {
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 30px;
   text-align: left;
@@ -440,4 +457,3 @@
     transform: scale(0.8)
   }
 }
-

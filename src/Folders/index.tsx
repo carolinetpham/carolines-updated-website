@@ -5,6 +5,7 @@ import Linkedin from "../Icons/Linkedin";
 import ExperienceClickComponent from "./ExperienceFolder";
 import Mail from "../Icons/Mail";
 import SkillsClickComponent from "./SkillsFolder";
+import BottomNavBar from "../Components/BottomNavBar";
 
 interface FoldersPageProps {
   username: string;
@@ -28,6 +29,7 @@ const FoldersPage: React.FC<FoldersPageProps> = ({ username }) => {
       <div id="row-four">
         <SkillsClickComponent />
       </div>
+      <BottomNavBar />
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.date-time-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Playwrite DE Grund', cursive;
+  font-size: 16px;
+  color: #ffffff;
+  padding-right: 20px;
+}
+
+.date-form {
+  padding-right: 10px;
+}
+
+.time-form {
+  padding-right: 10px;
+}
