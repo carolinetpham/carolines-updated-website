@@ -6,6 +6,7 @@ import Linkedin from "../Icons/Linkedin";
 import ExperienceClickComponent from "./ExperienceFolder";
 import Mail from "../Icons/Mail";
 import SkillsClickComponent from "./SkillsFolder";
+import Resume from "../Icons/Resume";
 import BottomNavBar from "../Components/BottomNavBar";
 
 interface FoldersProps {
@@ -16,9 +17,10 @@ export default function FoldersPage({ username }: FoldersProps) {
   const [showTutorial, setShowTutorial] = useState(true);
   const [currentStep, setCurrentStep] = useState(0);
   const [position, setPosition] = useState({ top: 0, left: 0 });
-  
-  // Reference to the Skills folder container
+
+  // References to folder and icon containers
   const skillsRef = useRef<HTMLDivElement>(null);
+  const resumeRef = useRef<HTMLDivElement>(null);
 
   const tutorialSteps = [
     {
@@ -28,22 +30,38 @@ export default function FoldersPage({ username }: FoldersProps) {
     },
     {
       step: 1,
-      title: "Click on these icons to explore!",
+      title: "Click on these folders to explore!",
       description: "Each folder represents different sections you can access.",
+      ref: skillsRef,
+    },
+    {
+      step: 2,
+      title: "Click on these icons to learn more about me!",
+      description: "Each icon represents an external link.",
+      ref: resumeRef,
     },
   ];
 
-  // Calculate the position of the Skills folder
+  // Update position based on current step
   useEffect(() => {
-    if (skillsRef.current) {
-      const { top, left, width } = skillsRef.current.getBoundingClientRect();
-      setPosition({ top: top + window.scrollY -15, left: left + width / 2 - 70});
+    const targetRef = tutorialSteps[currentStep]?.ref;
+
+    if (targetRef && targetRef.current) {
+      const { top, left, width } = targetRef.current.getBoundingClientRect();
+      setPosition({
+        top: top + window.scrollY - 15,
+        left: left + width / 2 - 60,
+      });
     }
-  }, [showTutorial, currentStep]);
+  }, [currentStep]);
 
   const handleStartTutorial = () => {
     setShowTutorial(true);
     setCurrentStep(1);
+  };
+
+  const handleNextStep = () => {
+    setCurrentStep(currentStep + 1);
   };
 
   const handleSkipTutorial = () => {
@@ -55,19 +73,18 @@ export default function FoldersPage({ username }: FoldersProps) {
     <div id="folders-container">
       <div id="row-one">
         <ProjectsClickComponent />
-        <Github />
-      </div>
-      <div id="row-two">
         <EducationClickComponent />
-        <Linkedin />
-      </div>
-      <div id="row-three">
         <ExperienceClickComponent />
-        <Mail />
-      </div>
-      <div id="row-four">
         <div ref={skillsRef}>
           <SkillsClickComponent />
+        </div>
+      </div>
+      <div id="row-two">
+        <Github />
+        <Linkedin />
+        <Mail />
+        <div ref={resumeRef}>
+          <Resume />
         </div>
       </div>
       <BottomNavBar />
@@ -87,17 +104,23 @@ export default function FoldersPage({ username }: FoldersProps) {
         </div>
       )}
 
-      {showTutorial && currentStep === 1 && (
+      {showTutorial && currentStep > 0 && (
         <div
-          className="highlight-folder"
+          className={`highlight-folder tooltip-step${currentStep}`}
           style={{ top: `${position.top}px`, left: `${position.left}px` }}
         >
-          <div className="tooltip">
-            <h3>{tutorialSteps[1].title}</h3>
-            <p>{tutorialSteps[1].description}</p>
-            <button className="end-button" onClick={handleSkipTutorial}>
-              Got it!
-            </button>
+          <div className={`tooltip tooltip-step${currentStep}`}>
+            <h3>{tutorialSteps[currentStep].title}</h3>
+            <p>{tutorialSteps[currentStep].description}</p>
+            {currentStep < tutorialSteps.length - 1 ? (
+              <button className="end-button" onClick={handleNextStep}>
+                Next
+              </button>
+            ) : (
+              <button className="end-button" onClick={handleSkipTutorial}>
+                Got it!
+              </button>
+            )}
           </div>
         </div>
       )}
