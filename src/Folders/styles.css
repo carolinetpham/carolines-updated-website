@@ -8,9 +8,9 @@
 }
 
 #row-one {
-  display: flex; 
-  align-items: center; 
-  gap: 50px; 
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 #row-two {
@@ -32,128 +32,242 @@
 }
 
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    animation: fadeIn 0.3s forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.3s forwards;
+}
+
+/* Tutorial Popup Styling */
+.welcome-popup {
+  font-family: 'Playwrite DE Grund', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+}
+
+.tutorial-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.yes-button,
+.no-button {
+  font-family: 'Playwrite DE Grund', cursive;
+  background: #a3a9ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.yes-button:hover {
+  background: #3ce77e;
+}
+
+.no-button:hover {
+  background: #ff7f7f;
+}
+
+/* Tutorial Highlight Styling */
+.highlight-folder {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.highlight-folder .tooltip {
+  font-family: 'Playwrite DE Grund', cursive;
+  position: absolute;
+  top: -20px;
+  left: 180px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.highlight-folder::after {
+  font-family: 'Playwrite DE Grund', cursive;
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #a3a9ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 0.3s forwards;
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   }
-  
-  .fade-out {
+
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.end-button {
+  font-family: 'Playwrite DE Grund', cursive;
+  background: #a3a9ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.end-button:hover {
+  background: #4f2574;
+}
+
+
+/* Fade-in animation for overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
     opacity: 1;
-    animation: fadeOut 0.3s forwards;
   }
-  
-  /* Fade-in animation for overlay */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
 
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 0;
   }
-  
-  /* Modal Container */
-  .modal {
-    background: white;
-    padding: 0;
-    border-radius: 20px;
-    width: 80vw;
-    height: 80vh;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(0); 
-    animation: grow 0.4s ease-in-out forwards; 
-    position: relative; 
-    text-align: left;
-    overflow-y: auto;
-    position: relative;
+}
+
+/* Modal Container */
+.modal {
+  background: white;
+  padding: 0;
+  border-radius: 20px;
+  width: 80vw;
+  height: 80vh;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  animation: grow 0.4s ease-in-out forwards;
+  position: relative;
+  text-align: left;
+  overflow-y: auto;
+  position: relative;
+}
+
+.animate-modal {
+  animation: grow 0.4s ease-in-out forwards;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
   }
 
-  .animate-modal {
-    animation: grow 0.4s ease-in-out forwards;
+  80% {
+    transform: scale(1.1);
   }
-  
-  @keyframes grow {
-    0% {
-      transform: scale(0); 
-      opacity: 0.2; 
-    }
-    80% {
-      transform: scale(1.1); 
-    }
-    100% {
-      transform: scale(1); 
-      opacity: 1; 
-    }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .close-modal {
-    animation: shrink 0.4s ease-in-out forwards; /* Smooth exit animation */
+}
+
+.close-modal {
+  animation: shrink 0.4s ease-in-out forwards;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  @keyframes shrink {
-    0% {
-      transform: scale(1); /* Start full size */
-      opacity: 1; /* Fully visible */
-    }
-    100% {
-      transform: scale(0); /* Shrink to invisible */
-      opacity: 0; /* Fade out */
-    }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
+}
 
 .close-button {
-    position: sticky;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    color: #ff5849;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
+  position: sticky;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #ff5849;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .close-button:hover {
-    color: #ff1e00; /* Change color on hover */
+  color: #ff1e00;
 }
 
 .folder-container {
   display: flex;
-  justify-content: flex-start; 
-  height: auto; 
+  justify-content: flex-start;
+  height: auto;
   padding-left: 20px;
 }
 
 .folder-wrapper {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .folder-text {
-  font-size: 20px; 
-  color: white; 
+  font-size: 20px;
+  color: white;
   filter: drop-shadow(1px 1px 1px #606060);
   font-family: 'Playwrite DE Grund', cursive;
 }
@@ -169,35 +283,83 @@
 }
 
 .education-subtitle {
+  background-color: #ffcccb;
+  padding: 10px 20px;
+  border-radius: 15px;
   font-family: 'Playwrite DE Grund', cursive;
+  font-size: 24px;
+  color: #8b0000;
   text-align: center;
-  font-size: 30px;
-  font-style: italic;
-  background-color: pink;
-  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0 30px;
 }
 
-.education-courses {
-  font-family: 'Playwrite DE Grund', cursive;
-  font-size: 20px;
+.education-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .course-list {
+  flex: 1;
+  padding: 15px;
+  border-radius: 15px;
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: lightblue;
-  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
 }
 
-.clubs {
-  font-family: 'Playwrite DE Grund', cursive;
-  font-size: 20px;
+.course-list li {
+  padding: 8px 0;
 }
 
 .clubs-list {
+  flex: 1;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: lightblue;
-  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
 }
+
+.club-list li {
+  padding: 8px 0;
+}
+
+.course-work-section {
+  flex: 1;
+  text-align: center;
+}
+
+.club-section {
+  flex: 1;
+  text-align: center;
+}
+
+.equal-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #b0e0e6;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  min-height: 250px;
+}
+
+.education-courses,
+.clubs {
+  font-family: 'Playwrite DE Grund', cursive;
+  font-style: bold;
+}
+
 
 /*Projects section */
 
@@ -220,27 +382,28 @@
 }
 
 .card {
-  background-color: #f8f9fa; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 
 .card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .card-img-top {
-  border-top-left-radius: 12px; 
+  border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  object-fit: cover; 
-  max-height: 150px; 
+  object-fit: cover;
+  max-height: 150px;
 }
+
 .card-title {
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 20px;
@@ -257,35 +420,35 @@
 
 /*GitHub styling*/
 .github-wrapper {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .github-icon-link {
-  text-decoration: none; /* Remove default link underline */
+  text-decoration: none;
 }
 
 .icon-text {
-  font-size: 20px; 
-  color: white; 
+  font-size: 20px;
+  color: white;
   filter: drop-shadow(1px 1px 1px #606060);
   font-family: 'Playwrite DE Grund', cursive;
 }
 
 /*LinkedIn styling*/
 .linkedin-wrapper {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .linkedin-icon-link {
-  text-decoration: none; /* Remove default link underline */
+  text-decoration: none;
 }
 
 /* Experience Styling */
@@ -304,18 +467,18 @@
 }
 
 .vertical-timeline::before {
-  width: 4px; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 2px; /* Optional: Make the line slightly rounded */
+  width: 4px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
 }
 
 /*Mail Styling*/
 .mail-container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  margin-top: 20px; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /*Skills Styling*/
@@ -336,51 +499,53 @@
 }
 
 .category {
-  display: flex; 
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo-container {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .languages {
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: #FFDCA5; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
+  background-color: #FFDCA5;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
 }
 
 .tools {
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: #FFCE7E; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
+  background-color: #FFCE7E;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
 }
 
 .libraries-and-frameworks {
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: #FFBF59; 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); 
-  margin: 15px; 
-  padding: 20px; 
+  background-color: #FFBF59;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
 }
 
-.languages-title, .tools-title, .libraries-and-frameworks-title {
+.languages-title,
+.tools-title,
+.libraries-and-frameworks-title {
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 30px;
   text-align: left;
@@ -439,5 +604,57 @@
   .card {
     transform: scale(0.8)
   }
-}
 
+  .education-description {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-header {
+    font-size: 18px;
+  }
+
+  .course-list li,
+  .clubs-list li {
+    font-size: 16px;
+  }
+
+  .highlight-folder {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .highlight-folder .tooltip {
+    max-width: 200px;
+    max-height: 180px;
+    top: -20px;
+    padding: 15px;
+  }
+
+  .highlight-folder .tooltip h3,
+  .highlight-folder .tooltip p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .end-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Hide overflow to prevent scrolling */
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  #folders-container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
+}

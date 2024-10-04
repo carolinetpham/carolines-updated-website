@@ -137,7 +137,7 @@ const ExperienceClickComponent: React.FC = () => {
     </div>,
   ];
 
-  let color = ["#ffde1a", "#ffce00", "#ffa700"];
+  let color = ["#ffffb7", "#fff192", "#ffea61"];
 
   return (
     <div className="folder-container">
@@ -165,7 +165,7 @@ const ExperienceClickComponent: React.FC = () => {
             <MdCancel onClick={handleCloseModal} className="close-button" />
             <h2 className="folder-title">Work Experience</h2>
             <div className="mx-auto">
-              <VerticalTimeline lineColor="#ff8d00">
+              <VerticalTimeline lineColor="#ffdd3c">
                 {timelineItems.map((item, index) => (
                   <VerticalTimelineElement
                     key={index}
@@ -174,7 +174,7 @@ const ExperienceClickComponent: React.FC = () => {
                     contentStyle={{
                       borderRadius: "15px",
                       background: color[index % 3],
-                      color: "white",
+                      color: "black",
                     }}
                     contentArrowStyle={{
                       borderRight: `7px solid ${color[index % 3]}`,
@@ -190,7 +190,6 @@ const ExperienceClickComponent: React.FC = () => {
                       className="vertical-timeline-element-title"
                       style={{
                         fontWeight: "bold",
-                        filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3))",
                       }}
                     >
                       {item.title}
@@ -199,17 +198,12 @@ const ExperienceClickComponent: React.FC = () => {
                       className="vertical-timeline-element-subtitle"
                       style={{
                         fontStyle: "italic",
-                        filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3))",
                       }}
                     >
                       {item.subtitle}
                     </h4>
 
-                    <ul
-                      style={{
-                        filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3))",
-                      }}
-                    >
+                    <ul>
                       {item.description.map((point, i) => (
                         <li key={i}>{point}</li>
                       ))}
