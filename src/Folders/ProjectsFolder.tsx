@@ -53,6 +53,36 @@ const ProjectsClickComponent: React.FC = () => {
                   style={{ width: "18rem" }}
                 >
                   <img
+                    src="./images/updated-portfolio-image.png"
+                    className="card-img-top"
+                    alt="image of home page of updated portfolio"
+                    width="100%"
+                  ></img>
+                  <div className="card-body">
+                    <h5 className="card-title">Updated Personal Portfolio</h5>
+                    <p className="card-text">
+                      Designed and developed an interactive portfolio dashboard
+                      using React. Created intuitive folder-style navigation
+                      components with CSS animations and transitions, enhancing
+                      user engagement. Utilized React Router for smooth
+                      client-side navigation and integrated custom hooks for
+                      state management.
+                    </p>
+                    <a
+                      href="https://github.com/carolinetpham/carolines-updated-website"
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Repository Link
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="card rounded-3 overflow-hidden"
+                  style={{ width: "18rem" }}
+                >
+                  <img
                     src="./images/pet-fetch-image.png"
                     className="card-img-top"
                     alt="image of home page of petfetch application"
