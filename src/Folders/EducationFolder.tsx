@@ -53,20 +53,24 @@ const EducationClickComponent: React.FC = () => {
               University
             </h3>
             <div className="education-description">
-              <h4 className="education-courses">Relevant Course Work:</h4>
-              <ul className="course-list">
-                <li>Web Development</li>
-                <li>Human Computer Interaction</li>
-                <li>Object-Oriented Design</li>
-                <li>Database Design</li>
-                <li>Algorithms and Data</li>
-                <li>Design Processes and Practices</li>
-                <li>Designing Interactive Experiences</li>
-              </ul>
-              <h4 className="clubs">Clubs:</h4>
-              <ul className="clubs-list">
-                <li>Women in Technology</li>
-              </ul>
+              <div className="course-work-section equal-box">
+                <h4 className="education-courses">Relevant Course Work:</h4>
+                  <ul className="course-list">
+                    <li>Web Development</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Object-Oriented Design</li>
+                    <li>Database Design</li>
+                    <li>Algorithms and Data</li>
+                    <li>Design Processes and Practices</li>
+                    <li>Designing Interactive Experiences</li>
+                  </ul>
+              </div>
+              <div className="clubs-section equal-box">
+                <h4 className="clubs">Clubs:</h4>
+                  <ul className="clubs-list">
+                    <li>Women in Technology</li>
+                  </ul>
+              </div>
             </div>
           </div>
         </div>

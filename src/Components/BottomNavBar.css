@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: rgba(255, 0, 144, 0.379);
+  background-color: rgba(255, 0, 144, 0.657);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +51,6 @@
 
 .logout-popup p {
   margin: 0 0 10px 0;
-  font-family: Arial, sans-serif;
 }
 
 .confirm-button,
@@ -74,17 +73,31 @@
   background: #ff7777;
 }
 
-.logging-out-screen {
-  font-family: 'Playwrite DE Grund', cursive !important;
+.full-screen-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.full-screen-overlay h1 {
+  color: white;
+  font-size: 36px;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

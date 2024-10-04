@@ -44,7 +44,7 @@ const BottomNavBar = () => {
         </div>
       )}
       {isLoggingOut && (
-        <div className="logging-out-screen">
+        <div className="full-screen-overlay">
           <h1>Logging out...</h1>
         </div>
       )}

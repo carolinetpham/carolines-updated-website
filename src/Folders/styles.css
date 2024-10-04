@@ -56,6 +56,115 @@
   animation: fadeOut 0.3s forwards;
 }
 
+/* Tutorial Popup Styling */
+.welcome-popup {
+  font-family: 'Playwrite DE Grund', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+}
+
+.tutorial-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.yes-button,
+.no-button {
+  font-family: 'Playwrite DE Grund', cursive;
+  background: #a3a9ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.yes-button:hover {
+  background: #3ce77e;
+}
+
+.no-button:hover {
+  background: #ff7f7f;
+}
+
+/* Tutorial Highlight Styling */
+.highlight-folder {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.highlight-folder .tooltip {
+  font-family: 'Playwrite DE Grund', cursive;
+  position: absolute;
+  top: -20px;
+  left: 180px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.highlight-folder::after {
+  font-family: 'Playwrite DE Grund', cursive;
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #a3a9ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.end-button {
+  font-family: 'Playwrite DE Grund', cursive;
+  background: #a3a9ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.end-button:hover {
+  background: #4f2574;
+}
+
+
 /* Fade-in animation for overlay */
 @keyframes fadeIn {
   from {
@@ -115,22 +224,17 @@
 
 .close-modal {
   animation: shrink 0.4s ease-in-out forwards;
-  /* Smooth exit animation */
 }
 
 @keyframes shrink {
   0% {
     transform: scale(1);
-    /* Start full size */
     opacity: 1;
-    /* Fully visible */
   }
 
   100% {
     transform: scale(0);
-    /* Shrink to invisible */
     opacity: 0;
-    /* Fade out */
   }
 }
 
@@ -146,7 +250,6 @@
 
 .close-button:hover {
   color: #ff1e00;
-  /* Change color on hover */
 }
 
 .folder-container {
@@ -180,35 +283,83 @@
 }
 
 .education-subtitle {
+  background-color: #ffcccb;
+  padding: 10px 20px;
+  border-radius: 15px;
   font-family: 'Playwrite DE Grund', cursive;
+  font-size: 24px;
+  color: #8b0000;
   text-align: center;
-  font-size: 30px;
-  font-style: italic;
-  background-color: pink;
-  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0 30px;
 }
 
-.education-courses {
-  font-family: 'Playwrite DE Grund', cursive;
-  font-size: 20px;
+.education-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .course-list {
+  flex: 1;
+  padding: 15px;
+  border-radius: 15px;
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: lightblue;
-  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
 }
 
-.clubs {
-  font-family: 'Playwrite DE Grund', cursive;
-  font-size: 20px;
+.course-list li {
+  padding: 8px 0;
 }
 
 .clubs-list {
+  flex: 1;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
   font-family: 'Playwrite DE Grund', cursive;
-  background-color: lightblue;
-  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
 }
+
+.club-list li {
+  padding: 8px 0;
+}
+
+.course-work-section {
+  flex: 1;
+  text-align: center;
+}
+
+.club-section {
+  flex: 1;
+  text-align: center;
+}
+
+.equal-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #b0e0e6;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  min-height: 250px;
+}
+
+.education-courses,
+.clubs {
+  font-family: 'Playwrite DE Grund', cursive;
+  font-style: bold;
+}
+
 
 /*Projects section */
 
@@ -278,7 +429,6 @@
 
 .github-icon-link {
   text-decoration: none;
-  /* Remove default link underline */
 }
 
 .icon-text {
@@ -299,7 +449,6 @@
 
 .linkedin-icon-link {
   text-decoration: none;
-  /* Remove default link underline */
 }
 
 /* Experience Styling */
@@ -319,9 +468,8 @@
 
 .vertical-timeline::before {
   width: 4px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
-  /* Optional: Make the line slightly rounded */
 }
 
 /*Mail Styling*/
@@ -456,4 +604,57 @@
   .card {
     transform: scale(0.8)
   }
+
+  .education-description {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-header {
+    font-size: 18px;
+  }
+
+  .course-list li,
+  .clubs-list li {
+    font-size: 16px;
+  }
+
+  .highlight-folder {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .highlight-folder .tooltip {
+    max-width: 200px;
+    max-height: 180px;
+    top: -20px;
+    padding: 15px;
+  }
+
+  .highlight-folder .tooltip h3,
+  .highlight-folder .tooltip p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .end-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Hide overflow to prevent scrolling */
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  #folders-container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
 }

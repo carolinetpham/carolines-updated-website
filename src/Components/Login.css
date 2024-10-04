@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
 
+body,
+html {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 .login-page {
   font-family: 'Playwrite DE Grund', cursive;
@@ -8,17 +15,50 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('./background.jpg') no-repeat;
+  width: 100vw;
+  background: url('./background.jpg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0;
 }
 
 .login-style {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .2);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(3px);
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   width: 420px;
   border-radius: 25px;
   padding: 70px 50px;
+}
+
+.full-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.full-screen-overlay h1 {
+  color: white;
+  font-size: 36px;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+  font-family: "Playwrite DE Grund", cursive;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -29,7 +69,6 @@
 
 .login-page h1 {
   text-align: center;
-  font-size: 70px;
   margin: 0;
 }
 
