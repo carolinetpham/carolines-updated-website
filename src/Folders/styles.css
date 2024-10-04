@@ -582,7 +582,7 @@
 /*Mobile Device Styling*/
 
 
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .education-subtitle {
     font-size: 15px;
   }
