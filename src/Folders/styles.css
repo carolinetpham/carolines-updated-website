@@ -375,7 +375,7 @@
   grid-template-columns: repeat(3, 1fr);
   flex-direction: row;
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: content-box;
   gap: 20px;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -389,6 +389,8 @@
   margin: 15px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 
 }
 
