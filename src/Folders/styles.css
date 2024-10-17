@@ -283,79 +283,46 @@
 }
 
 .education-subtitle {
-  background-color: #ffcccb;
   padding: 10px 20px;
   border-radius: 15px;
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 24px;
-  color: #8b0000;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px 0 30px;
+  font-style: italic;
 }
 
 .education-description {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  flex-direction: column;
 }
 
 .course-list {
-  flex: 1;
+  background-color: #95D2B3;
   padding: 15px;
   border-radius: 15px;
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 18px;
-  line-height: 1.6;
-  margin: 0;
-  text-align: left;
+  margin: 10px;
 }
 
-.course-list li {
-  padding: 8px 0;
-}
 
 .clubs-list {
-  flex: 1;
+  background-color:#55AD9B;
   padding: 15px;
   border-radius: 15px;
   text-align: left;
   font-family: 'Playwrite DE Grund', cursive;
   font-size: 18px;
-  line-height: 1.6;
-  margin: 0;
+  margin: 10px;
 }
 
-.club-list li {
-  padding: 8px 0;
-}
 
-.course-work-section {
-  flex: 1;
-  text-align: center;
-}
-
-.club-section {
-  flex: 1;
-  text-align: center;
-}
-
-.equal-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #b0e0e6;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 0px;
-  min-height: 250px;
-}
 
 .education-courses,
 .clubs {
+  font-size: 20px;
+  text-align: left;
   font-family: 'Playwrite DE Grund', cursive;
   font-style: bold;
 }
@@ -391,7 +358,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 300px;
-
 }
 
 .card:hover {
