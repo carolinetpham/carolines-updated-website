@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CiFaceSmile } from "react-icons/ci";
-import "./Login.css";
+import "././ComponentStyleSheets/Login.css";
 
 interface LoginPageProps {
   onLogin: (username: string) => void;
@@ -19,15 +19,15 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
       setIsLoggingIn(true); // Set logging in state
       setTimeout(() => {
         onLogin(username);
-        setIsLoggingIn(false); 
+        setIsLoggingIn(false);
         navigate("/FoldersPage"); // Navigate to the folders page after login
-      }, 2000); 
+      }, 2000);
     }
   };
 
   return (
     <div className="login-page">
-      {isLoggingIn ? ( 
+      {isLoggingIn ? (
         <div className="full-screen-overlay">
           <h1>Logging in...</h1>
         </div>

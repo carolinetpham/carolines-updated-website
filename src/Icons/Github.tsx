@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import "./icons.css";
 export default function Github() {
   return (
     <div className="github-wrapper">

@@ -1,0 +1,96 @@
+/*Skills Styling*/
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .skills-title {
+    font-family: 'Playwrite DE Grund', cursive;
+    text-align: center;
+    font-size: 40px;
+    font-style: bold;
+  }
+  
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .languages {
+    font-family: 'Playwrite DE Grund', cursive;
+    background-color: #FFDCA5;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .tools {
+    font-family: 'Playwrite DE Grund', cursive;
+    background-color: #FFCE7E;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .libraries-and-frameworks {
+    font-family: 'Playwrite DE Grund', cursive;
+    background-color: #FFBF59;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .languages-title,
+  .tools-title,
+  .libraries-and-frameworks-title {
+    font-family: 'Playwrite DE Grund', cursive;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .logo-container p {
+    font-family: 'Playwrite DE Grund', cursive;
+    text-align: center;
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  .logo {
+    color: #FB7569;
+    height: 50px;
+    width: auto;
+  }
+  
+  .logo:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+  }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaCat } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import DateTime from "./DateTime";
-import "./BottomNavBar.css";
+import "././ComponentStyleSheets/BottomNavBar.css";
 
 const BottomNavBar = () => {
   const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);

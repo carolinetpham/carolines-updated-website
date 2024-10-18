@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./DateTime.css";
+import "././ComponentStyleSheets/DateTime.css";
 
 const DateTime: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -26,7 +26,8 @@ const DateTime: React.FC = () => {
 
   return (
     <div className="date-time-container">
-      <span className="date-form">{formattedDate}</span><span className="time-form">{formattedTime}</span>
+      <span className="date-form">{formattedDate}</span>
+      <span className="time-form">{formattedTime}</span>
     </div>
   );
 };

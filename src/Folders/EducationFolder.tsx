@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaFolder } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
-import "./styles.css";
+import "./StyleSheets/styles.css";
+import "./StyleSheets/education.css";
 
 const EducationClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

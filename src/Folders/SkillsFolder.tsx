@@ -31,7 +31,8 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-import "./styles.css";
+import "./StyleSheets/styles.css";
+import "./StyleSheets/skills.css";
 
 const SkillsClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

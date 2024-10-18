@@ -1,4 +1,5 @@
 import { IoIosPaper } from "react-icons/io";
+import "./icons.css";
 export default function Github() {
   return (
     <div className="resume-wrapper">

@@ -6,7 +6,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import "./styles.css";
+import "./StyleSheets/styles.css";
+import "./StyleSheets/experience.css";
 
 const ExperienceClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

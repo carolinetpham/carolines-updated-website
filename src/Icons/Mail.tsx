@@ -1,4 +1,5 @@
 import { FaEnvelope } from "react-icons/fa";
+import "./icons.css";
 export default function Mail() {
   return (
     <div className="mail-container">
