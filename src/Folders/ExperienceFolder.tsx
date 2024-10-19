@@ -33,10 +33,9 @@ const ExperienceClickComponent: React.FC = () => {
       subtitle: "Software Support Analyst Co-op",
       date: "Jan 2024 - Jun 2024",
       description: [
-        "Upgraded and installed software for external clients and internal groups",
-        "Ran analysis in order to validate software and assure software is up to quality standards",
-        "Collaborated with cross-functional teams to troubleshoot and debug software-related problems",
-        "Documented meetings and created documentation for software applications",
+        "Utilized Microsoft SQL Server Management Studio to troubleshoot and debug software-related problems",
+        "Executed test analyses to validate and ensure software met quality standards and compliance requirements",
+        "Produced meeting records and software documentation, optimizing communication and alignment across teams",
       ],
     },
     {
@@ -44,8 +43,8 @@ const ExperienceClickComponent: React.FC = () => {
       subtitle: "Teaching Assistant, Human Computer Interaction",
       date: "Sep 2024 - Present",
       description: [
-        "Hold office hours in order to assist students with Human Computer Interaction coursework",
-        "Grade and provide feedback to students to assist with design processes and practices",
+        "Hold weekly office hours to support students with HCI concepts, usability engineering, and course assignments",
+        "Provide feedback on UI practices and processes, encouraging iterative design improvements",
       ],
     },
     {

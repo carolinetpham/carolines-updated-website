@@ -55,3 +55,20 @@
   .btn {
     font-family: 'Playwrite DE Grund', cursive;
   }
+
+  /* Styling for Phones */
+
+  @media(max-width: 800px) {
+    .projects-dashboard {
+      display: -webkit-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .card {
+      transform: scale(0.8)
+    }
+    
+  }
