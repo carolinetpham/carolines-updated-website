@@ -70,6 +70,7 @@ const ExperienceClickComponent: React.FC = () => {
       <a href="https://www.verisk.com/" target="_blank" rel="noreferrer">
         <img
           src="https://companieslogo.com/img/orig/VRSK-5db4d89e.png?t=1649106626"
+          loading="lazy"
           style={{
             width: "100%",
             height: "100%",
@@ -98,6 +99,7 @@ const ExperienceClickComponent: React.FC = () => {
       >
         <img
           src="https://pbs.twimg.com/profile_images/1646179419088715776/11ivFHHz_400x400.jpg"
+          loading="lazy"
           style={{
             width: "100%",
             height: "100%",
@@ -122,6 +124,7 @@ const ExperienceClickComponent: React.FC = () => {
       <a href="https://www.northeastern.edu/" target="_blank" rel="noreferrer">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Northeastern_seal.svg/150px-Northeastern_seal.svg.png"
+          loading="lazy"
           style={{
             width: "100%",
             height: "100%",
