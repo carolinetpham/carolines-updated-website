@@ -65,7 +65,7 @@ const EducationClickComponent: React.FC = () => {
               <div className="clubs-section">
                 <h4 className="clubs">Clubs:</h4>
                 <div className="clubs-list">
-                  WeDev (Associate UI/UX Lead), Women in Technology
+                  WeDev (UI/UX Lead), Women in Technology
                 </div>
               </div>
             </div>
