@@ -54,6 +54,35 @@ const ProjectsClickComponent: React.FC = () => {
                   style={{ width: "18rem" }}
                 >
                   <img
+                    src="./images/sustain-belt-image.png"
+                    className="card-img-top"
+                    alt="image of home page of sustainbelt website"
+                    width="100%"
+                  ></img>
+                  <div className="card-body">
+                    <h5 className="card-title">EverFit Belt Website Design</h5>
+                    <p className="card-text">
+                      Designed a mock website in Figma to showcase my paper
+                      prototype of my fictional object -- an automatic belt that
+                      uses EEG sensors to adapt to an individual's body.
+                      Incorporated three pages to allow users to learn more
+                      about the product.
+                    </p>
+                    <a
+                      href="https://www.figma.com/proto/oY9IUcYpIFhehE0Ak7Pxis/SustainBelt?node-id=1-3&t=hnI0pP4YXXNmECXa-1&starting-point-node-id=3%3A2"
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Figma Link
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="card rounded-3 overflow-hidden"
+                  style={{ width: "18rem" }}
+                >
+                  <img
                     src="./images/updated-portfolio-image.png"
                     className="card-img-top"
                     alt="image of home page of updated portfolio"
