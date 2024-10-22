@@ -56,11 +56,11 @@ const SkillsClickComponent: React.FC = () => {
     {
       category: "Languages",
       items: [
-        { logo: FaJava, name: "Java" },
         { logo: FaJsSquare, name: "JavaScript" },
         { logo: SiTypescript, name: "TypeScript" },
         { logo: FaHtml5, name: "HTML" },
         { logo: FaCss3Alt, name: "CSS" },
+        { logo: FaJava, name: "Java" },
         { logo: FaDatabase, name: "SQL" },
         { logo: FaPython, name: "Python" },
       ],
