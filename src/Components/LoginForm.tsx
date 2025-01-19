@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CiFaceSmile } from "react-icons/ci";
 import "././ComponentStyleSheets/Login.css";
+import LoginDateTime from "./LoginDateTime";
 
 interface LoginPageProps {
   onLogin: (username: string) => void;
@@ -32,25 +32,26 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
           <h1>Logging in...</h1>
         </div>
       ) : (
-        <div className="login-style">
-          <h1>Hi there!</h1>
-          <p>
-            Enter your name to explore <CiFaceSmile />
-          </p>
-          <form className="login-form" onSubmit={handleLogin}>
-            <input
-              type="text"
-              placeholder="Your Name"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-              className="name-input"
-            />
-            <button type="submit" className="login-button">
-              Log in
-            </button>
-          </form>
-        </div>
+        <><LoginDateTime /><div className="login-style">
+            <h1>Hi there!</h1>
+            <p>Enter your name to explore</p>
+            <form className="login-form" onSubmit={handleLogin}>
+              <div className="login-input">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                  className="name-input" />
+              </div>
+              <div className="login-align">
+                <button type="submit" className="login-button">
+                  Log in
+                </button>
+              </div>
+            </form>
+          </div></>
       )}
     </div>
   );

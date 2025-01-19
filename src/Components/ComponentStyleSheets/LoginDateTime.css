@@ -1,0 +1,16 @@
+.time-format {
+    display: flex;
+    justify-content: center;
+    font-size: 75px;
+    color: white;
+}
+
+.date-format {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.login-date-time-container {
+    margin-bottom: 5%;
+}
