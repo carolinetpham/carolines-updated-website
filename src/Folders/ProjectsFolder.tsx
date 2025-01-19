@@ -1,9 +1,219 @@
 import React, { useState } from "react";
+import { Card, Button, Modal, Carousel } from "antd";
 import { FaFolder } from "react-icons/fa";
-import { MdCancel } from "react-icons/md";
-import "./StyleSheets/styles.css";
+import { ArrowLeftOutlined, CloseOutlined } from "@ant-design/icons";
 import "./StyleSheets/projects.css";
 
+const ProjectsClickComponent: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentView, setCurrentView] = useState<"projects" | "details">(
+    "projects"
+  );
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  const projects = [
+    {
+      id: "everfit-belt",
+      title: "EverFit Belt Website Design",
+      description:
+        "Designed a mock website in Figma to showcase my paper prototype of my fictional object -- an automatic belt that uses EEG sensors to adapt to an individual's body. Incorporated three pages to allow users to learn more about the product.",
+      imgSrc: "./images/sustain-belt-image.png",
+      images: [
+        "./images/everfit-images/everfit-belt-storyboard.png",
+        "./images/everfit-images/regular-belt.png",
+        "./images/everfit-images/prototype-1.png",
+        "./images/everfit-images/prototype-2.png",
+        "./images/everfit-images/prototype-3.png",
+        "./images/everfit-images/prototype-3-worn.png",
+      ],
+    },
+    {
+      id: "personal-portfolio",
+      title: "Updated Personal Portfolio",
+      description:
+        "Designed and developed an interactive portfolio dashboard using React. Created intuitive folder-style navigation components with CSS animations and transitions, enhancing user engagement. Utilized React Router for smooth client-side navigation and integrated custom hooks for state management.",
+      imgSrc: "./images/updated-portfolio-image.png",
+      images: [],
+    },
+  ];
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+    setCurrentView("projects"); // Reset view when modal closes
+    setSelectedProject(null); // Clear selected project
+  };
+
+  const handleLearnMore = (projectId: string) => {
+    setSelectedProject(projectId);
+    setCurrentView("details");
+  };
+
+  const handleBack = () => {
+    setCurrentView("projects");
+    setSelectedProject(null);
+  };
+
+  const { Meta } = Card;
+
+  return (
+    <>
+      <div className="folder-wrapper">
+        <FaFolder
+          onClick={showModal}
+          style={{
+            color: "#A3A9FF",
+            cursor: "pointer",
+            fontSize: "100px",
+            filter: "drop-shadow(2px 2px 2px #999)",
+          }}
+        />
+        <span className="folder-text">Projects</span>
+      </div>
+      <Modal
+        width={"90%"}
+        open={isModalOpen}
+        closable={false}
+        footer={null}
+        style={{
+          padding: 0,
+          height: "80vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {/* Fixed Header */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "10px 20px",
+            backgroundColor: "#fff",
+            borderBottom: "1px solid #ddd",
+            position: "sticky",
+            top: 0,
+            zIndex: 10,
+          }}
+        >
+          {currentView === "details" ? (
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <ArrowLeftOutlined
+                onClick={handleBack}
+                style={{ cursor: "pointer", fontSize: "18px" }}
+              />
+              <span style={{ fontSize: "18px", fontWeight: "bold" }}>
+                {projects.find((p) => p.id === selectedProject)?.title}
+              </span>
+            </div>
+          ) : (
+            <h3 style={{ margin: 0 }}>Projects</h3>
+          )}
+          <CloseOutlined
+            onClick={handleCancel}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "18px",
+            }}
+          />
+        </div>
+
+        {/* Scrollable Content */}
+
+        {currentView === "projects" && (
+          <div className="project-cards">
+            {projects.map((project) => (
+              <Card
+                key={project.id}
+                className="card"
+                cover={
+                  <img
+                    alt={`${project.title}`}
+                    src={project.imgSrc}
+                    style={{ objectFit: "cover", height: "150px" }} // Consistent image height
+                  />
+                }
+                actions={[
+                  <Button
+                    key="learn-more"
+                    type="link"
+                    onClick={() => handleLearnMore(project.id)}
+                  >
+                    Learn More
+                  </Button>,
+                ]}
+              >
+                <Meta title={project.title} description={project.description} />
+              </Card>
+            ))}
+          </div>
+        )}
+
+        {currentView === "details" && selectedProject && (
+          <div>
+            {projects
+              .filter((project) => project.id === selectedProject)
+              .map((project) => (
+                <div key={project.id}>
+                  <Carousel
+                    autoplay
+                    autoplaySpeed={2000}
+                    style={{
+                      marginTop: "20px",
+                      width: "80%",
+                      maxWidth: "600px",
+                      margin: "0 auto",
+                    }}
+                  >
+                    {project.images.map((image, index) => (
+                      <div
+                        key={index}
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          height: "300px",
+                          backgroundColor: "#f0f0f0",
+                        }}
+                      >
+                        <img
+                          src={image}
+                          alt={`Slide ${index + 1} of ${project.title}`}
+                          style={{
+                            maxWidth: "100%",
+                            maxHeight: "100%",
+                            objectFit: "contain",
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </Carousel>
+                  <p
+                    style={{
+                      lineHeight: "1.6",
+                      fontSize: "16px",
+                      color: "#333",
+                    }}
+                  >
+                    {project.description}
+                  </p>
+                </div>
+              ))}
+          </div>
+        )}
+      </Modal>
+    </>
+  );
+};
+
+export default ProjectsClickComponent;
+
+/*
 const ProjectsClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -232,3 +442,4 @@ const ProjectsClickComponent: React.FC = () => {
 };
 
 export default ProjectsClickComponent;
+*/
