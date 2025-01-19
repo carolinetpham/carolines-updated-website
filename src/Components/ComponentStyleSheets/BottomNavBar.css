@@ -34,7 +34,7 @@
 }
 
 .logout-popup {
-  font-family: 'Playwrite DE Grund', cursive !important;
+  font-family: 'Poppins' !important;
   position: fixed;
   bottom: 80px;
   left: 20px;
@@ -46,7 +46,7 @@
 }
 
 .logout-message {
-  font-family: 'Playwrite DE Grund', cursive !important;
+  font-family: 'Poppins' !important;
 }
 
 .logout-popup p {
@@ -55,7 +55,7 @@
 
 .confirm-button,
 .cancel-button {
-  font-family: 'Playwrite DE Grund', cursive !important;
+  font-family: 'Poppins'!important;
   background: #767676;
   color: white;
   border: none;

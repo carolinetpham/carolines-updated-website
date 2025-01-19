@@ -46,7 +46,7 @@
 
 /* Tutorial Popup Styling */
 .welcome-popup {
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -67,7 +67,7 @@
 
 .yes-button,
 .no-button {
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
   background: #a3a9ff;
   color: white;
   border: none;
@@ -93,7 +93,7 @@
 }
 
 .highlight-folder .tooltip-step1 {
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
   position: absolute;
   top: -20px;
   left: 180px;
@@ -105,7 +105,7 @@
 }
 
 .highlight-folder .tooltip-step2 {
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
   position: absolute;
   top: -20px;
   right: 50px;
@@ -117,7 +117,7 @@
 }
 
 .highlight-folder::after {
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
   content: "";
   position: absolute;
   width: 125px;
@@ -149,7 +149,7 @@
 }
 
 .end-button {
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
   background: #a3a9ff;
   color: white;
   border: none;
@@ -269,7 +269,7 @@
   font-size: 20px;
   color: white;
   filter: drop-shadow(1px 1px 1px #606060);
-  font-family: 'Playwrite DE Grund', cursive;
+  font-family: 'Poppins';
 }
 
 

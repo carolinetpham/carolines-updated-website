@@ -2,7 +2,7 @@
 
 
 .education-title {
-    font-family: 'Playwrite DE Grund', cursive;
+    font-family: 'Poppins', cursive;
     text-align: center;
     font-size: 40px;
     font-style: bold;
@@ -11,7 +11,7 @@
   .education-subtitle {
     padding: 10px 20px;
     border-radius: 15px;
-    font-family: 'Playwrite DE Grund', cursive;
+    font-family: 'Poppins', cursive;
     font-size: 24px;
     text-align: center;
     margin: 10px 0 30px;
@@ -27,7 +27,7 @@
     background-color: #95D2B3;
     padding: 15px;
     border-radius: 15px;
-    font-family: 'Playwrite DE Grund', cursive;
+    font-family: 'Poppins', cursive;
     font-size: 18px;
     margin: 10px;
   }
@@ -38,7 +38,7 @@
     padding: 15px;
     border-radius: 15px;
     text-align: left;
-    font-family: 'Playwrite DE Grund', cursive;
+    font-family: 'Poppins';
     font-size: 18px;
     margin: 10px;
   }
@@ -49,6 +49,6 @@
   .clubs {
     font-size: 20px;
     text-align: left;
-    font-family: 'Playwrite DE Grund', cursive;
+    font-family: 'Poppins';
     font-style: bold;
   }

@@ -2,8 +2,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-family: 'Playwrite DE Grund', cursive;
-  font-size: 16px;
+  font-family: 'Poppins';
   color: #ffffff;
   padding-right: 20px;
 }
