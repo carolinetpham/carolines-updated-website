@@ -17,6 +17,7 @@
   flex: 1 1 250px; 
   max-width: 300px; 
   box-sizing: border-box; 
+  filter: drop-shadow(2px 2px 5px #c5c5c5);
 }
 
 /* Styling for Phones */
