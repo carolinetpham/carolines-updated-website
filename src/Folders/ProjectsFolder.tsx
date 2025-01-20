@@ -36,8 +36,8 @@ const ProjectsClickComponent: React.FC = () => {
       description:
         "Designed and developed an interactive portfolio dashboard using React. Created intuitive folder-style navigation components with CSS animations and transitions, enhancing user engagement. Utilized React Router for smooth client-side navigation and integrated custom hooks for state management.",
       markdownFile: "./ProjectMarkdowns/new-portfolio.md",
-      imgSrc: "./images/updated-portfolio-image.png",
-      images: [],
+      imgSrc: "./images/updated-portfolio-images/new-portfolio-main.png",
+      images: ["./images/updated-portfolio-images/new-portfolio-main.png"],
     },
     {
       id: "pet-fetch",
@@ -46,7 +46,17 @@ const ProjectsClickComponent: React.FC = () => {
         "Designed and implemented REST APIs in Flask to support CRUD operations, and built a responsive UI using Streamlit tailored to user personas. Deployed the application using Docker containers and utilized Git for version control, ensuring a streamlined development workflow.",
       markdownFile: "./ProjectMarkdowns/petfetch.md",
       imgSrc: "./images/pet-fetch-image.png",
-      images: [],
+      images: [
+        "./images/pet-fetch-images/persona-1.png",
+        "./images/pet-fetch-images/persona-2.png",
+        "./images/pet-fetch-images/persona-3.png",
+        "./images/pet-fetch-images/ER-diagram.png",
+        "./images/pet-fetch-images/relational-db.png",
+        "./images/pet-fetch-images/app-page1.png",
+        "./images/pet-fetch-images/app-page2.png",
+        "./images/pet-fetch-images/app-page3.png",
+        "./images/pet-fetch-images/app-page4.png",
+      ],
     },
     {
       id: "a-eye",
@@ -55,7 +65,22 @@ const ProjectsClickComponent: React.FC = () => {
         "Conducted needfinding and usability tests, led a Wizard of Oz study, and developed prototypes to gather user feedback and refine app design. Created a high-fidelity prototype in Figma to ensure a seamless and engaging user experience.",
       markdownFile: "./ProjectMarkdowns/aeye.md",
       imgSrc: "./images/aeye-image.png",
-      images: [],
+      images: [
+        "./images/aeye-images/persona1.png",
+        "./images/aeye-images/persona2.png",
+        "./images/aeye-images/persona3.png",
+        "./images/aeye-images/storyboard1.png",
+        "./images/aeye-images/storyboard2.png",
+        "./images/aeye-images/storyboard3.png",
+        "./images/aeye-images/journey1.png",
+        "./images/aeye-images/journey2.png",
+        "./images/aeye-images/journey3.png",
+        "./images/aeye-images/sketch.png",
+        "./images/aeye-images/lofi.png",
+        "./images/aeye-images/sticker-sheet.png",
+        "./images/aeye-images/hifi1.png",
+        "./images/aeye-images/hifi2.png",
+      ],
     },
     {
       id: "old-personal-portfolio",
@@ -124,7 +149,7 @@ const ProjectsClickComponent: React.FC = () => {
         <span className="folder-text">Projects</span>
       </div>
       <Modal
-        width={"90%"}
+        width={"85%"}
         open={isModalOpen}
         closable={false}
         footer={null}
