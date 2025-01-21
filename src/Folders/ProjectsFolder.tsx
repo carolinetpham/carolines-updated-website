@@ -89,7 +89,10 @@ const ProjectsClickComponent: React.FC = () => {
         "Independently mastered React and Bootstrap to build a visually compelling interface, showcasing skills in UI/UX design and front-end development. Integrated a contact page for email communication, enhancing user engagement.",
       markdownFile: "./ProjectMarkdowns/old-portfolio.md",
       imgSrc: "./images/old-portfolio-image.png",
-      images: [],
+      images: [
+        "./images/old-portfolio-image.png",
+        "./images/old-portfolio-images/figma-design.png",
+      ],
     },
     {
       id: "virtual-bullet-journal",
@@ -98,7 +101,10 @@ const ProjectsClickComponent: React.FC = () => {
         "Designed a Java GUI application using Model-View-Controller patterns and engineered a data storage mechanism following SOLID principles to enhance the user experience.",
       markdownFile: "./ProjectMarkdowns/vbj.md",
       imgSrc: "./images/virtual-bj-image.png",
-      images: [],
+      images: [
+        "./images/virtual-bj-image.png",
+        "./images/vbj-images/uml-diagram.png",
+      ],
     },
   ];
 
