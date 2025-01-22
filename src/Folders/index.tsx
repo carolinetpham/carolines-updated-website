@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import EducationClickComponent from "./EducationFolder";
+import AboutClickComponent from "./AboutFolder";
 import Github from "../Icons/Github";
 import ProjectsClickComponent from "./ProjectsFolder";
 import Linkedin from "../Icons/Linkedin";
@@ -73,7 +73,7 @@ export default function FoldersPage({ username }: FoldersProps) {
     <div id="folders-container">
       <div id="row-one">
         <ProjectsClickComponent />
-        <EducationClickComponent />
+        <AboutClickComponent />
         <ExperienceClickComponent />
         <div ref={skillsRef}>
           <SkillsClickComponent />

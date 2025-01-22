@@ -1,0 +1,25 @@
+/*About Me Styling*/
+
+h2 {
+    font-size: large;
+}
+
+.about-desc {
+    font-size: medium;
+}
+
+
+@media (max-width: 800px) {
+    .headshot {
+        max-width: 273px;
+    }
+    .about-info {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        width: 100%;
+    }
+    h2 {
+        text-align: center;
+    }
+}
