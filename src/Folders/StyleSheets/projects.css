@@ -18,19 +18,9 @@
   max-width: 300px; 
   box-sizing: border-box; 
   filter: drop-shadow(2px 2px 5px #c5c5c5);
+  font-family: "Poppins";
 }
 
-/* Styling for Phones */
-@media (max-width: 800px) {
-
-  .project-cards {
-    flex-direction: column; 
-    gap: 20px; 
-    width: 100%;
-  }
-
-  .card {
-    width: 90%; 
-    margin: 0 auto; 
-  }
+.mds {
+  font-family: "Poppins";
 }

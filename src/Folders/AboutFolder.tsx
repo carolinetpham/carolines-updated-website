@@ -6,7 +6,7 @@ import "./StyleSheets/about.css";
 import { Card, Flex, Modal } from "antd";
 const AboutClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const isMobile = window.innerWidth < 768;
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -15,10 +15,9 @@ const AboutClickComponent: React.FC = () => {
   };
 
   const imgStyle: React.CSSProperties = {
-    display: 'block',
+    display: "block",
     width: 400,
-  }
-
+  };
 
   return (
     <>
@@ -35,7 +34,7 @@ const AboutClickComponent: React.FC = () => {
         <span className="folder-text">About</span>
       </div>
       <Modal
-        width={"85%"}
+        width={isMobile ? "90%" : "85%"}
         open={isModalOpen}
         closable={false}
         footer={null}
@@ -79,7 +78,12 @@ const AboutClickComponent: React.FC = () => {
           align="center"
           style={{ marginTop: "10px" }}
         >
-          <img className="headshot" alt="headshot" src="./images/headshot.png" style={imgStyle}/>
+          <img
+            className="headshot"
+            alt="headshot"
+            src="./images/headshot.png"
+            style={imgStyle}
+          />
           <Flex vertical justify="center" style={{ padding: 32 }}>
             <h2>Hi, I'm Caroline!</h2>
             <p className="about-desc">
@@ -105,4 +109,3 @@ const AboutClickComponent: React.FC = () => {
 };
 
 export default AboutClickComponent;
-

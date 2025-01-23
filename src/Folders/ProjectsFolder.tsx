@@ -7,6 +7,7 @@ import "./StyleSheets/projects.css";
 
 const ProjectsClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isMobile = window.innerWidth < 768;
   const [currentView, setCurrentView] = useState<"projects" | "details">(
     "projects"
   );
@@ -155,7 +156,7 @@ const ProjectsClickComponent: React.FC = () => {
         <span className="folder-text">Projects</span>
       </div>
       <Modal
-        width={"85%"}
+        width={isMobile ? "90%" : "70%"}
         open={isModalOpen}
         closable={false}
         footer={null}
@@ -275,7 +276,7 @@ const ProjectsClickComponent: React.FC = () => {
                     ))}
                   </Carousel>
                   <div>
-                    <ReactMarkdown>{markdownContent}</ReactMarkdown>
+                    <ReactMarkdown className="mds">{markdownContent}</ReactMarkdown>
                   </div>
                 </div>
               ))}
