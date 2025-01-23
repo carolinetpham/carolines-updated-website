@@ -22,4 +22,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - `React`
 - `React Router Dom`
 - `React Icons`
-- Background images from [FreePik](https://www.freepik.com/)
+- `Ant Design`
