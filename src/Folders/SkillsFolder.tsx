@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaFolder } from "react-icons/fa";
-import { MdCancel } from "react-icons/md";
+import { FaFolder, FaNodeJs } from "react-icons/fa";
+import { CloseOutlined } from "@ant-design/icons";
 import { IconType } from "react-icons";
 import {
   FaJava,
@@ -22,74 +22,104 @@ import {
   SiStreamlit,
   SiFlask,
   SiMysql,
-  SiGradle,
   SiFigma,
   SiEclipseide,
   SiJunit5,
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiTypescript,
+  SiAntdesign,
+  SiExpress,
 } from "react-icons/si";
 
 import "./StyleSheets/styles.css";
 import "./StyleSheets/skills.css";
+import { Button, Modal } from "antd";
+
+// Define the SkillType enum
+export enum SkillType {
+  FrontEnd = "Front-End",
+  BackEnd = "Back-End",
+  Design = "Design",
+  Organization = "Organization",
+}
 
 const SkillsClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<SkillType | null>(null);
+  const [activeColor, setActiveColor] = useState<string | null>(null);
+  const isMobile = window.innerWidth < 768;
 
-  const handleSkillsFolderClick = () => {
-    setIsModalOpen(true); // Open the modal when the folder icon is clicked
-    setTimeout(() => {
-      setIsModalVisible(true);
-    }, 10);
+  const showModal = () => {
+    setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalVisible(false);
-    setTimeout(() => {
-      setIsModalOpen(false);
-    }, 400);
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const toggleCategory = (category: SkillType, color: string) => {
+    setActiveCategory((prev) => (prev === category ? null : category));
+    setActiveColor((prev) => (prev === color ? null : color));
   };
 
   const skills = [
     {
       category: "Languages",
       items: [
-        { logo: FaJsSquare, name: "JavaScript" },
-        { logo: SiTypescript, name: "TypeScript" },
-        { logo: FaHtml5, name: "HTML" },
-        { logo: FaCss3Alt, name: "CSS" },
-        { logo: FaJava, name: "Java" },
-        { logo: FaDatabase, name: "SQL" },
-        { logo: FaPython, name: "Python" },
+        { logo: FaJsSquare, name: "JavaScript", type: [SkillType.FrontEnd] },
+        { logo: SiTypescript, name: "TypeScript", type: [SkillType.FrontEnd] },
+        { logo: FaHtml5, name: "HTML", type: [SkillType.FrontEnd] },
+        { logo: FaCss3Alt, name: "CSS", type: [SkillType.FrontEnd] },
+        { logo: FaJava, name: "Java", type: [SkillType.BackEnd] },
+        { logo: FaDatabase, name: "SQL", type: [SkillType.BackEnd] },
+        {
+          logo: FaPython,
+          name: "Python",
+          type: [SkillType.BackEnd, SkillType.FrontEnd],
+        },
       ],
     },
     {
       category: "Tools",
       items: [
-        { logo: SiFigma, name: "Figma" },
-        { logo: FaJira, name: "Jira" },
-        { logo: FaDocker, name: "Docker" },
-        { logo: SiGradle, name: "Gradle" },
-        { logo: FaGit, name: "Git" },
-        { logo: FaGithub, name: "GitHub" },
-        { logo: SiVisualstudiocode, name: "VS Code" },
-        { logo: SiEclipseide, name: "Eclipse" },
-        { logo: SiIntellijidea, name: "IntelliJ" },
-        { logo: SiAdobephotoshop, name: "Photoshop" },
-        { logo: SiAdobeillustrator, name: "Illustrator" },
+        { logo: FaNodeJs, name: "NodeJS", type: [SkillType.BackEnd] },
+        { logo: SiFigma, name: "Figma", type: [SkillType.Design] },
+        { logo: FaJira, name: "Jira", type: [SkillType.Organization] },
+        { logo: FaDocker, name: "Docker", type: [SkillType.Organization] },
+        { logo: SiJunit5, name: "JUnit", type: [SkillType.BackEnd] },
+        { logo: FaGit, name: "Git", type: [SkillType.Organization] },
+        { logo: FaGithub, name: "GitHub", type: [SkillType.Organization] },
+        {
+          logo: SiVisualstudiocode,
+          name: "VS Code",
+          type: [SkillType.Organization],
+        },
+        { logo: SiEclipseide, name: "Eclipse", type: [SkillType.Organization] },
+        {
+          logo: SiIntellijidea,
+          name: "IntelliJ",
+          type: [SkillType.Organization],
+        },
+        { logo: SiAdobephotoshop, name: "Photoshop", type: [SkillType.Design] },
+        {
+          logo: SiAdobeillustrator,
+          name: "Illustrator",
+          type: [SkillType.Design],
+        },
       ],
     },
     {
       category: "Libraries and Frameworks",
       items: [
-        { logo: FaReact, name: "React" },
-        { logo: FaBootstrap, name: "Bootstrap" },
-        { logo: SiMysql, name: "MySQL" },
-        { logo: SiStreamlit, name: "Streamlit" },
-        { logo: SiFlask, name: "Flask" },
-        { logo: SiJunit5, name: "JUnit" },
+        { logo: FaReact, name: "React", type: [SkillType.FrontEnd] },
+        { logo: SiAntdesign, name: "Ant Design", type: [SkillType.FrontEnd] },
+        { logo: FaBootstrap, name: "Bootstrap", type: [SkillType.FrontEnd] },
+        { logo: SiMysql, name: "MySQL", type: [SkillType.BackEnd] },
+        { logo: SiExpress, name: "Express.js", type: [SkillType.BackEnd] },
+        { logo: SiStreamlit, name: "Streamlit", type: [SkillType.FrontEnd] },
+        { logo: SiFlask, name: "Flask", type: [SkillType.BackEnd] },
+        { logo: SiJunit5, name: "JUnit", type: [SkillType.BackEnd] },
       ],
     },
   ];
@@ -98,26 +128,43 @@ const SkillsClickComponent: React.FC = () => {
     item: {
       name: string;
       logo: IconType;
+      type: SkillType[];
     };
+    isActive: boolean;
+    activeColor: string | null;
   }
 
-  const SkillItem: React.FC<SkillItemProps> = ({ item }) => (
-    <div className="logo-container">
+  const SkillItem: React.FC<SkillItemProps> = ({
+    item,
+    isActive,
+    activeColor,
+  }) => (
+    <div
+      className="logo-container"
+      style={{
+        opacity: isActive ? 1.5 : 0.5,
+        transform: isActive ? "scale(1.2)" : "scale(1)",
+        transition: "all 0.8s ease",
+      }}
+    >
       <item.logo
         className="logo"
-        style={{ fontSize: "50px", color: "#FB7569" }}
+        style={{
+          fontSize: isMobile ? "50px" : "30px",
+          color: isActive && activeColor ? activeColor : "#000000",
+        }}
       />
       <p>{item.name}</p>
     </div>
   );
 
   return (
-    <div className="folder-container">
+    <>
       <div className="folder-wrapper">
         <FaFolder
-          onClick={handleSkillsFolderClick}
+          onClick={showModal}
           style={{
-            color: "#FF948A",
+            color: "#A3A9FF",
             cursor: "pointer",
             fontSize: "100px",
             filter: "drop-shadow(2px 2px 2px #999)",
@@ -125,45 +172,97 @@ const SkillsClickComponent: React.FC = () => {
         />
         <span className="folder-text">Skills</span>
       </div>
-      {isModalOpen && (
+      <Modal
+        width={isMobile ? "90%" : "85%"}
+        open={isModalOpen}
+        closable={false}
+        footer={null}
+        style={{
+          padding: 0,
+          height: "80vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <div
-          className={`modal-overlay ${isModalVisible ? "fade-in" : "fade-out"}`}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "10px 20px",
+            backgroundColor: "#fff",
+            borderBottom: "1px solid #ddd",
+            position: "sticky",
+            top: 0,
+            zIndex: 10,
+          }}
         >
-          <div
-            className={`modal ${
-              isModalVisible ? "animate-modal" : "close-modal"
-            }`}
+          <span style={{ fontSize: "18px", fontWeight: "bold" }}>
+            Technical Skills
+          </span>
+          <CloseOutlined
+            onClick={handleCancel}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "18px",
+            }}
+          />
+        </div>
+        <div className="button-options">
+          <Button
+            color="blue"
+            variant="solid"
+            onClick={() => toggleCategory(SkillType.FrontEnd, "#1677ff")}
           >
-            <MdCancel onClick={handleCloseModal} className="close-button" />
-            <h2 className="skills-title">Technical Skills</h2>
-            <div id="#skills">
-              <div className="skills-description">
-                {skills.map((skill, index) => (
-                  <div key={index}>
-                    <h1
-                      className={`${skill.category
-                        .toLowerCase()
-                        .replace(/ /g, "-")}-title`}
-                    >
-                      {skill.category}:
-                    </h1>
-                    <div
-                      className={`category ${skill.category
-                        .toLowerCase()
-                        .replace(/ /g, "-")}`}
-                    >
-                      {skill.items.map((item, index) => (
-                        <SkillItem key={index} item={item} />
-                      ))}
-                    </div>
-                  </div>
-                ))}
+            Front-End
+          </Button>
+          <Button
+            color="purple"
+            variant="solid"
+            onClick={() => toggleCategory(SkillType.Design, "#9254de")}
+          >
+            Design
+          </Button>
+          <Button
+            color="pink"
+            variant="solid"
+            onClick={() => toggleCategory(SkillType.BackEnd, "#f759ab")}
+          >
+            Back-End
+          </Button>
+          <Button
+            color="green"
+            variant="solid"
+            onClick={() => toggleCategory(SkillType.Organization, "#73d13d")}
+          >
+            Organization
+          </Button>
+        </div>
+        <div id="#skills">
+          <div className="skills-description">
+            {skills.map((skill, index) => (
+              <div key={index}>
+                <h1>{skill.category}:</h1>
+                <div className="category">
+                  {skill.items.map((item, index) => (
+                    <SkillItem
+                      key={index}
+                      item={item}
+                      isActive={
+                        !activeCategory || item.type.includes(activeCategory)
+                      }
+                      activeColor={activeColor}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      )}
-    </div>
+      </Modal>
+    </>
   );
 };
 
