@@ -11,9 +11,9 @@ export default function Github() {
         <IoIosPaper
           style={{
             fontSize: "80px",
-            color: "#A46FE5",
+            color: "#fddcfb",
             cursor: "pointer",
-            filter: "drop-shadow(2px 2px 2px #999)",
+            filter: "drop-shadow(2px 2px 2px #242424)",
           }}
         />
       </a>

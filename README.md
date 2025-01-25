@@ -23,3 +23,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - `React Router Dom`
 - `React Icons`
 - `Ant Design`
+
+## Credits
+Desktop background credit to [Louis Hoebregts](https://codepen.io/Mamboleoo/pen/BxMQYQ)

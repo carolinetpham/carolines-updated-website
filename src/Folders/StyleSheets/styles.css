@@ -4,6 +4,7 @@
 #folders-container {
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 #row-one {
@@ -65,8 +66,7 @@
   margin-top: 20px;
 }
 
-.yes-button,
-.no-button {
+.ok-button {
   font-family: 'Poppins';
   background: #a3a9ff;
   color: white;
@@ -77,13 +77,10 @@
   transition: 0.3s ease-in-out;
 }
 
-.yes-button:hover {
-  background: #3ce77e;
+.ok-button:hover {
+  background: #68368b;
 }
 
-.no-button:hover {
-  background: #ff7f7f;
-}
 
 /* Tutorial Highlight Styling */
 .highlight-folder {

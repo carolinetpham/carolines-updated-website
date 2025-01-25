@@ -20,10 +20,10 @@ const ExperienceClickComponent: React.FC = () => {
         <FaFolder
           onClick={showModal}
           style={{
-            color: "#A3A9FF",
+            color: "#fff2b3",
             cursor: "pointer",
             fontSize: "100px",
-            filter: "drop-shadow(2px 2px 2px #999)",
+            filter: "drop-shadow(2px 2px 2px #242424)",
           }}
         />
         <span className="folder-text">Experience</span>
