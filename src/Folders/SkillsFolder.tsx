@@ -151,7 +151,7 @@ const SkillsClickComponent: React.FC = () => {
         className="logo"
         style={{
           fontSize: isMobile ? "50px" : "30px",
-          color: isActive && activeColor ? activeColor : "#000000",
+          color: isActive && activeColor ? activeColor : "#363636",
         }}
       />
       <p>{item.name}</p>
