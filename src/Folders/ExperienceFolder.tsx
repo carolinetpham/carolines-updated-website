@@ -73,10 +73,11 @@ const ExperienceClickComponent: React.FC = () => {
             className="timeline-items"
             pending={
               <>
-                <span>Incoming...</span> <br />
-                <strong>Technology Development Program Co-op</strong> <br />
-                <em>Optum Technology</em> <br />
-                <span>Jan-Jun 2025</span>
+                <span>Currently...</span> <br />
+                <strong>Software Engineer Co-op </strong>
+                <em>Technology Development Program</em> <br />
+                <em>Optum (UHG)</em> <br />
+                <span>Jan 2025 - Present</span>
               </>
             }
             items={[
@@ -85,7 +86,7 @@ const ExperienceClickComponent: React.FC = () => {
                   <>
                     <strong>Software Support Analyst Co-op</strong> <br />
                     <em>Verisk, Extreme Event Solutions</em> <br />
-                    <span>Jan-Jun 2024</span>
+                    <span>Jan - Jun 2024</span>
                     <ul>
                       <li>
                         Utilized Microsoft SQL Server Management Studio to
@@ -111,7 +112,7 @@ const ExperienceClickComponent: React.FC = () => {
                     </strong>{" "}
                     <br />
                     <em>Khoury College of Computer Sciences</em> <br />
-                    <span>Sep-Dec 2024</span>
+                    <span>Sep - Dec 2024</span>
                     <ul>
                       <li>
                         Held weekly office hours to support students with HCI
