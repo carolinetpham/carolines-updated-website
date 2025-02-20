@@ -5,11 +5,11 @@ h2 {
 }
 
 .about-desc {
-  font-size: medium;
+  font-size: small;
 }
 
 .about-header {
-  line-height: 50%;
+  line-height: 25px;
 }
 
 .headshot {
@@ -29,5 +29,10 @@ h2 {
   }
   h2 {
     text-align: center;
+  }
+
+  .about-header {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

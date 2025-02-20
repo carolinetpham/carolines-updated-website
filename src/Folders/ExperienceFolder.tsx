@@ -78,6 +78,9 @@ const ExperienceClickComponent: React.FC = () => {
                 <em>Technology Development Program</em> <br />
                 <em>Optum (UHG)</em> <br />
                 <span>Jan 2025 - Present</span>
+                <ul>
+                  <li>Working alongside the synthetic data team</li>
+                </ul>
               </>
             }
             items={[
