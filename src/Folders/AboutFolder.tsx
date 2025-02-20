@@ -85,7 +85,12 @@ const AboutClickComponent: React.FC = () => {
             style={imgStyle}
           />
           <Flex vertical justify="center" style={{ padding: 32 }}>
-            <h2>Hi, I'm Caroline!</h2>
+            <div className="about-header">
+              <h2>Hi, I'm Caroline!</h2>
+              <h3>
+                <em>UX/Front-end Engineer</em> | 📍<em>Boston, MA</em>
+              </h3>
+            </div>
             <p className="about-desc">
               I am a UX/Front-end Engineer currently pursuing a B.S. in Computer
               Science and Design at Northeastern. Through my coursework, I have
