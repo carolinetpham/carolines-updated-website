@@ -40,7 +40,7 @@ const App: React.FC = () => {
             path="/FoldersPage/*"
             element={
               username ? (
-                <FoldersPage username={username} />
+                <FoldersPage />
               ) : (
                 <Navigate to="/LoginPage" />
               )

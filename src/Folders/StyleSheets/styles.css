@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
 
 /*General Styling*/
 #folders-container {
@@ -45,43 +45,6 @@
   animation: fadeOut 0.3s forwards;
 }
 
-/* Tutorial Popup Styling */
-.welcome-popup {
-  font-family: 'Poppins';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  z-index: 1000;
-}
-
-.tutorial-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.ok-button {
-  font-family: 'Poppins';
-  background: #a3a9ff;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.ok-button:hover {
-  background: #68368b;
-}
-
-
 /* Tutorial Highlight Styling */
 .highlight-folder {
   position: absolute;
@@ -90,7 +53,7 @@
 }
 
 .highlight-folder .tooltip-step1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   position: absolute;
   top: -20px;
   left: 180px;
@@ -102,7 +65,7 @@
 }
 
 .highlight-folder .tooltip-step2 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   position: absolute;
   top: -20px;
   right: 50px;
@@ -114,7 +77,7 @@
 }
 
 .highlight-folder::after {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   content: "";
   position: absolute;
   width: 125px;
@@ -146,7 +109,7 @@
 }
 
 .end-button {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background: #a3a9ff;
   color: white;
   border: none;
@@ -160,7 +123,6 @@
 .end-button:hover {
   background: #4f2574;
 }
-
 
 /* Fade-in animation for overlay */
 @keyframes fadeIn {
@@ -266,12 +228,10 @@
   font-size: 20px;
   color: white;
   filter: drop-shadow(1px 1px 1px #606060);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
-
 /*Mobile Device Styling*/
-
 
 @media (max-width: 800px) {
   .education-subtitle {
@@ -343,5 +303,4 @@
     padding: 0;
     width: 100vw;
   }
-
 }
