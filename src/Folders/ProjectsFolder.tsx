@@ -217,7 +217,7 @@ const ProjectsClickComponent: React.FC = () => {
                   <img
                     alt={`${project.title}`}
                     src={project.imgSrc}
-                    style={{ objectFit: "cover", height: "150px",  }} // Consistent image height
+                    style={{ objectFit: "cover", height: "150px" }} // Consistent image height
                   />
                 }
                 actions={[
@@ -276,7 +276,20 @@ const ProjectsClickComponent: React.FC = () => {
                     ))}
                   </Carousel>
                   <div>
-                    <ReactMarkdown className="mds">{markdownContent}</ReactMarkdown>
+                    <ReactMarkdown
+                      className="mds"
+                      components={{
+                        a: ({ node, ...props }) => (
+                          <a
+                            {...props}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          />
+                        ),
+                      }}
+                    >
+                      {markdownContent}
+                    </ReactMarkdown>
                   </div>
                 </div>
               ))}
