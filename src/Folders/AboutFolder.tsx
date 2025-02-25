@@ -101,10 +101,11 @@ const AboutClickComponent: React.FC = () => {
               and Adobe After Effects. I love combining design and code to
               create intuitive digital experiences, as I have a strong passion
               for human computer interaction. I have previously done a co-op at
-              Verisk, and I am an incoming co-op at Optum. I currently serve as
-              the president of WeDev, Northeastern's iOS Development Club, and
-              partake in Northeastern's women in technology club. In my free
-              time I enjoy reading, weightlifting, and designing.
+              Verisk, and I am currently a Software Engineer co-op at Optum. I
+              currently serve as the president of iHusky, Northeastern's iOS
+              Development Club, and partake in Northeastern's women in
+              technology club. In my free time I enjoy reading, weightlifting,
+              and designing.
             </p>
           </Flex>
         </Flex>
