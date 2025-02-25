@@ -9,7 +9,6 @@ interface FoldersProps {
 
 const HelpIcon = ({ username }: FoldersProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const isMobile = window.innerWidth < 768;
 
   const showModal = () => {
     setIsModalOpen(true);

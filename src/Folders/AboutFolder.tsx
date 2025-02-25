@@ -3,7 +3,7 @@ import { FaFolder } from "react-icons/fa";
 import { CloseOutlined } from "@ant-design/icons";
 import "./StyleSheets/styles.css";
 import "./StyleSheets/about.css";
-import { Card, Flex, Modal } from "antd";
+import { Flex, Modal } from "antd";
 const AboutClickComponent: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = window.innerWidth < 768;

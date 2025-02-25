@@ -1,4 +1,4 @@
-import React, { useState, ReactElement } from "react";
+import React, { useState } from "react";
 import { FaFolder } from "react-icons/fa";
 import { CloseOutlined } from "@ant-design/icons";
 import "./StyleSheets/styles.css";
