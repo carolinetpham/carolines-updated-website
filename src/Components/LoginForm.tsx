@@ -22,7 +22,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
       localStorage.setItem("visitorName", username);
 
       const scriptUrl =
-        "https://script.google.com/macros/s/AKfycbzllxyQ9-vcCYVwIof6leSoqYC2-1tJ2uzhqiioYWuFn1nsGoVela6g8f9x7YXqPpha/exec";
+        "https://script.google.com/macros/s/AKfycbzI3xgmi3P-vJstaQVR67qSzauI165jAoTEcX1Xl9acKloGNaMwBs8a5HpPHICuKIEF/exec";
 
       fetch(scriptUrl, {
         method: "POST",
