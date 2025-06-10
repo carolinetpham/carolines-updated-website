@@ -21,12 +21,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
       // Save to localStorage
       localStorage.setItem("visitorName", username);
 
-      const scriptUrl = process.env.REACT_APP_GOOGLE_SCRIPT_URL;
-
-      if (!scriptUrl) {
-        console.error("Google Script URL is not defined in .env");
-        return;
-      }
+      const scriptUrl =
+        "https://script.google.com/macros/s/AKfycbzllxyQ9-vcCYVwIof6leSoqYC2-1tJ2uzhqiioYWuFn1nsGoVela6g8f9x7YXqPpha/exec";
 
       fetch(scriptUrl, {
         method: "POST",
