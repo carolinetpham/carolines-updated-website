@@ -16,11 +16,30 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username.trim()) {
-      setIsLoggingIn(true); // Set logging in state
+      setIsLoggingIn(true);
+
+      // Save to localStorage
+      localStorage.setItem("visitorName", username);
+
+      const scriptUrl = process.env.REACT_APP_GOOGLE_SCRIPT_URL;
+
+      if (!scriptUrl) {
+        console.error("Google Script URL is not defined in .env");
+        return;
+      }
+
+      fetch(scriptUrl, {
+        method: "POST",
+        body: JSON.stringify({ name: username }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
       setTimeout(() => {
         onLogin(username);
         setIsLoggingIn(false);
-        navigate("/FoldersPage"); // Navigate to the folders page after login
+        navigate("/FoldersPage");
       }, 2000);
     }
   };
@@ -32,7 +51,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
           <h1>Logging in...</h1>
         </div>
       ) : (
-        <><LoginDateTime /><div className="login-style">
+        <>
+          <LoginDateTime />
+          <div className="login-style">
             <h1>Hi there!</h1>
             <p>Enter your name to explore</p>
             <form className="login-form" onSubmit={handleLogin}>
@@ -43,7 +64,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  className="name-input" />
+                  className="name-input"
+                />
               </div>
               <div className="login-align">
                 <button type="submit" className="login-button">
@@ -51,7 +73,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
                 </button>
               </div>
             </form>
-          </div></>
+          </div>
+        </>
       )}
     </div>
   );
