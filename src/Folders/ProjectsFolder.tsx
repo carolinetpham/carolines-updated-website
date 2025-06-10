@@ -16,6 +16,18 @@ const ProjectsClickComponent: React.FC = () => {
 
   const projects = [
     {
+      id: "boston-coffee-shops",
+      title: "Boston Coffee Shops",
+      description:
+        "Developed a web page for Boston coffee shop enthusiasts to explore shops around the area. Users are able to gain insights such as nearest shop via their current location, if the shop has ample seating, and if there is WiFi availability.",
+      markdownFile: "./ProjectMarkdowns/coffee-shops.md",
+      imgSrc: "./images/boston-coffee-shops-image.png",
+      images: [
+        "./images/boston-coffee-shops-images/initial-sketch.png",
+        "./images/boston-coffee-shops-images/figma-design.png",
+      ],
+    },
+    {
       id: "everfit-belt",
       title: "EverFit Belt Website Design",
       description:
