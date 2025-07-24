@@ -74,20 +74,18 @@ const ExperienceClickComponent: React.FC = () => {
             pending={
               <>
                 <span>Currently...</span> <br />
-                <strong>Software Engineer Co-op </strong>
-                <em>Technology Development Program</em> <br />
-                <em>Optum (UHG)</em> <br />
-                <span>Jan 2025 - Present</span>
-                <ul>
-                  <li>Working alongside the synthetic data team</li>
-                </ul>
+                <strong>Software Developer Intern </strong>
+                <br />
+                <em>Advanced Data Risk Management (ADRM)</em> <br />
+                <span>Jun 2025 - Present</span>
+                <ul></ul>
               </>
             }
             items={[
               {
                 children: (
                   <>
-                    <strong>Software Support Analyst Co-op</strong> <br />
+                    <strong>Software Quality Analyst Co-op</strong> <br />
                     <em>Verisk, Extreme Event Solutions</em> <br />
                     <span>Jan - Jun 2024</span>
                     <ul>
@@ -124,6 +122,37 @@ const ExperienceClickComponent: React.FC = () => {
                       <li>
                         Provided feedback on UI practices and processes,
                         encouraging iterative design improvements.
+                      </li>
+                    </ul>
+                  </>
+                ),
+              },
+              {
+                children: (
+                  <>
+                    <strong>Software Engineer Co-op</strong> <br />
+                    <em>Optum (UHG)</em> <br />
+                    <span>Jan - Jun 2025</span>
+                    <ul>
+                      <li>
+                        Built a dashboard using Java and HTML to visualize
+                        real-time API health, improving observability for
+                        engineering teams.
+                      </li>
+                      <li>
+                        Developed an automated email reporting system in Java to
+                        generate test-failure summaries, streamlining QA
+                        processes.
+                      </li>
+                      <li>
+                        Parsed SQL data to populate front-end templates,
+                        ensuring accurate and consistent delivery of system
+                        status updates.
+                      </li>
+                      <li>
+                        Implemented GitHub Actions workflows to automate
+                        SonarQube and Prisma Cloud scans, enhancing code quality
+                        checks.
                       </li>
                     </ul>
                   </>
