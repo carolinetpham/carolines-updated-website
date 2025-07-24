@@ -78,7 +78,7 @@ const ExperienceClickComponent: React.FC = () => {
                 <br />
                 <em>Advanced Data Risk Management (ADRM)</em> <br />
                 <span>Jun 2025 - Present</span>
-                <ul></ul>
+                <ul></ul> 
               </>
             }
             items={[
