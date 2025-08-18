@@ -14,11 +14,6 @@ const AboutClickComponent: React.FC = () => {
     setIsModalOpen(false);
   };
 
-  const imgStyle: React.CSSProperties = {
-    display: "block",
-    width: 400,
-  };
-
   return (
     <>
       <div className="folder-wrapper">
@@ -82,7 +77,13 @@ const AboutClickComponent: React.FC = () => {
             className="headshot"
             alt="headshot"
             src="./images/headshot.png"
-            style={imgStyle}
+            style={{
+              display: "block",
+              width: 300,
+              borderRadius: "50%",
+              boxShadow: "none",
+              filter: "none",
+            }}
           />
           <Flex vertical justify="center" style={{ padding: 32 }}>
             <div className="about-header">
@@ -92,20 +93,13 @@ const AboutClickComponent: React.FC = () => {
               </h3>
             </div>
             <p className="about-desc">
-              I am a UX/Front-end Engineer currently pursuing a B.S. in Computer
-              Science and Design at Northeastern. Through my coursework, I have
-              been able to sharpen my programming skills in
-              JavaScript/TypeScript, Java, Python, and SQL, alongside front-end
-              frameworks such as React and Bootstrap. I have experience using
-              creative tools such as Figma, Adobe Illustrator, Adobe Photoshop,
-              and Adobe After Effects. I love combining design and code to
-              create intuitive digital experiences, as I have a strong passion
-              for human computer interaction. I have previously done a co-op at
-              Verisk, and I am currently a Software Engineer co-op at Optum. I
-              currently serve as the president of iHusky, Northeastern's iOS
-              Development Club, and partake in Northeastern's women in
-              technology club. In my free time I enjoy reading, weightlifting,
-              and designing.
+              I’m a UX Engineer currently studying Computer Science and UI/UX
+              Design at Northeastern University. My interests include UX
+              Engineering, Frontend Engineering, UI/UX Design, and Human
+              Computer Interaction. My goal is to blend my development and
+              design skills in order to prioritize the user. Outside of Computer
+              Science and Design, I find immense joy in reading, specifically
+              translated fiction and classics, cats, and tea.
             </p>
           </Flex>
         </Flex>
