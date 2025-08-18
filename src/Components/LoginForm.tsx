@@ -18,20 +18,6 @@ const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
     if (username.trim()) {
       setIsLoggingIn(true);
 
-      // Save to localStorage
-      localStorage.setItem("visitorName", username);
-
-      const scriptUrl =
-        "https://script.google.com/macros/s/AKfycbzI3xgmi3P-vJstaQVR67qSzauI165jAoTEcX1Xl9acKloGNaMwBs8a5HpPHICuKIEF/exec";
-
-      fetch(scriptUrl, {
-        method: "POST",
-        body: JSON.stringify({ name: username }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
       setTimeout(() => {
         onLogin(username);
         setIsLoggingIn(false);
