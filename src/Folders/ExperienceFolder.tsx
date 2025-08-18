@@ -74,11 +74,17 @@ const ExperienceClickComponent: React.FC = () => {
             pending={
               <>
                 <span>Currently...</span> <br />
-                <strong>Software Developer Intern </strong>
+                <strong>Looking for full-time roles </strong>
                 <br />
-                <em>Advanced Data Risk Management (ADRM)</em> <br />
-                <span>Jun 2025 - Present</span>
-                <ul></ul> 
+                <em>
+                  UX Engineer, Front-end Engineer, UI Developer, Web Developer,
+                  Software Engineer
+                </em>{" "}
+                <br />
+                <span>
+                  <b>Availability:</b> May 2026
+                </span>
+                <ul></ul>
               </>
             }
             items={[
@@ -153,6 +159,32 @@ const ExperienceClickComponent: React.FC = () => {
                         Implemented GitHub Actions workflows to automate
                         SonarQube and Prisma Cloud scans, enhancing code quality
                         checks.
+                      </li>
+                    </ul>
+                  </>
+                ),
+              },
+              {
+                children: (
+                  <>
+                    <strong>Software Development Intern</strong> <br />
+                    <em>Advanced Data Risk Management (ADRM)</em> <br />
+                    <span>Jun - Aug 2025</span>
+                    <ul>
+                      <li>
+                        Prototyped ADRM’s corporate website using Next.js,
+                        implementing a Prisma schema with SQLite to evaluate
+                        feasibility.
+                      </li>
+                      <li>
+                        Contributed to the development of DEFENDER, ADRM’s SaaS
+                        security platform, to optimize real-time security
+                        alerts.
+                      </li>
+                      <li>
+                        Spearheaded the front-end redesign in Wix, focusing on
+                        responsive design and consistency aligning with company
+                        goals.
                       </li>
                     </ul>
                   </>
