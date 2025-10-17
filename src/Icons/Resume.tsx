@@ -4,7 +4,7 @@ export default function Github() {
   return (
     <div className="resume-wrapper">
       <a
-        href="https://drive.google.com/file/d/1ibBbgN_Sk9_X35gm-HqcSw8gLDkIb4JP/view?usp=sharing"
+        href="https://drive.google.com/file/d/1_QMTxTG494m9UuXVi6FLHTFzYU-mR6RJ/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
       >
