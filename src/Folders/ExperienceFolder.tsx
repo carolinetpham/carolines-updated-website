@@ -94,20 +94,6 @@ const ExperienceClickComponent: React.FC = () => {
                     <strong>Software Quality Analyst Co-op</strong> <br />
                     <em>Verisk, Extreme Event Solutions</em> <br />
                     <span>Jan - Jun 2024</span>
-                    <ul>
-                      <li>
-                        Utilized Microsoft SQL Server Management Studio to
-                        troubleshoot and debug software-related problems.
-                      </li>
-                      <li>
-                        Executed test analyses to validate and ensure software
-                        met quality standards and compliance requirements.
-                      </li>
-                      <li>
-                        Produced meeting records and software documentation,
-                        optimizing communication and alignment across teams.
-                      </li>
-                    </ul>
                   </>
                 ),
               },
@@ -120,16 +106,6 @@ const ExperienceClickComponent: React.FC = () => {
                     <br />
                     <em>Khoury College of Computer Sciences</em> <br />
                     <span>Sep - Dec 2024</span>
-                    <ul>
-                      <li>
-                        Held weekly office hours to support students with HCI
-                        concepts, usability engineering, and course assignments.
-                      </li>
-                      <li>
-                        Provided feedback on UI practices and processes,
-                        encouraging iterative design improvements.
-                      </li>
-                    </ul>
                   </>
                 ),
               },
@@ -139,28 +115,6 @@ const ExperienceClickComponent: React.FC = () => {
                     <strong>Software Engineer Co-op</strong> <br />
                     <em>Optum (UHG)</em> <br />
                     <span>Jan - Jun 2025</span>
-                    <ul>
-                      <li>
-                        Built a dashboard using Java and HTML to visualize
-                        real-time API health, improving observability for
-                        engineering teams.
-                      </li>
-                      <li>
-                        Developed an automated email reporting system in Java to
-                        generate test-failure summaries, streamlining QA
-                        processes.
-                      </li>
-                      <li>
-                        Parsed SQL data to populate front-end templates,
-                        ensuring accurate and consistent delivery of system
-                        status updates.
-                      </li>
-                      <li>
-                        Implemented GitHub Actions workflows to automate
-                        SonarQube and Prisma Cloud scans, enhancing code quality
-                        checks.
-                      </li>
-                    </ul>
                   </>
                 ),
               },
@@ -170,23 +124,6 @@ const ExperienceClickComponent: React.FC = () => {
                     <strong>Software Development Intern</strong> <br />
                     <em>Advanced Data Risk Management (ADRM)</em> <br />
                     <span>Jun - Aug 2025</span>
-                    <ul>
-                      <li>
-                        Prototyped ADRM’s corporate website using Next.js,
-                        implementing a Prisma schema with SQLite to evaluate
-                        feasibility.
-                      </li>
-                      <li>
-                        Contributed to the development of DEFENDER, ADRM’s SaaS
-                        security platform, to optimize real-time security
-                        alerts.
-                      </li>
-                      <li>
-                        Spearheaded the front-end redesign in Wix, focusing on
-                        responsive design and consistency aligning with company
-                        goals.
-                      </li>
-                    </ul>
                   </>
                 ),
               },
