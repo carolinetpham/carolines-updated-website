@@ -1,7 +1,7 @@
 # 👩🏻‍💻 Welcome to my desktop (aka personal portfolio website)! 
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- Check it out in your browser [here](https://carolinetpham.com/)!
+- Check it out in your browser [here](https://carolinepham.dev/)!
 - Deployed with [Netlify](https://app.netlify.com/)
 
 ## Available Scripts
