@@ -4,7 +4,7 @@ export default function Linkedin() {
   return (
     <div className="linkedin-wrapper">
       <a
-        href="https://www.linkedin.com/in/caroline-t-pham/"
+        href="https://www.linkedin.com/in/carolinetpham/"
         target="_blank"
         rel="noopener noreferrer"
       >

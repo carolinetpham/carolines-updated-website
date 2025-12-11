@@ -130,7 +130,7 @@ const ExperienceClickComponent: React.FC = () => {
               {
                 children: (
                   <>
-                    <strong>Introduction to Databases Teaching Assistant</strong> <br />
+                    <strong>Introduction to Databases Head Teaching Assistant</strong> <br />
                     <em>Khoury College of Computer Sciences</em> <br />
                     <span>Jun - Present</span>
                   </>
